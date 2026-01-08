@@ -7,7 +7,7 @@ import { ArrowRight, Sparkles, Globe, Award } from 'lucide-react';
 export default function HeroSection() {
   const stats = [
     { icon: Globe, value: '70+', label: 'Countries' },
-    { icon: Award, value: '70%', label: 'Savings' },
+    { icon: Award, value: 'High', label: 'Savings' },
     { icon: Sparkles, value: '1M+', label: 'Hotels' },
   ];
 
@@ -61,7 +61,7 @@ export default function HeroSection() {
           >
             <TypeAnimation
               sequence={[
-                'Save up to 70%',
+                'High Savings',
                 2000,
                 'Travel the World',
                 2000,

@@ -48,7 +48,7 @@ export default function Footer() {
               Live-Leisure
             </motion.h3>
             <p className="text-gray-400 mb-6">
-              Your gateway to exclusive travel experiences. Save up to 70% on your next vacation with our premium membership.
+              Your gateway to exclusive travel experiences. Enjoy high savings on your next vacation with our premium membership.
             </p>
             
             {/* Contact Info */}

@@ -10,7 +10,7 @@ export default function FAQSection() {
   const faqs = [
     {
       question: 'What is Live-Leisure membership?',
-      answer: 'Live-Leisure is a lifetime travel club membership offering exclusive access to resort weeks in 70+ countries, discounted hotels, flights, cruises, and more. With a one-time membership fee, you gain access to up to 70% savings on your vacations for life.',
+      answer: 'Live-Leisure is a lifetime travel club membership offering exclusive access to resort weeks in 70+ countries, discounted hotels, flights, cruises, and more. With a one-time membership fee, you gain access to high savings on your vacations for life.',
     },
     {
       question: 'How do Resort Weeks work?',
@@ -22,7 +22,7 @@ export default function FAQSection() {
     },
     {
       question: 'How much can I really save with Live-Leisure?',
-      answer: 'Members typically save up to 70% on accommodations compared to public rates. Our price match guarantee ensures you get the best deal, plus an additional 5% discount if you find a better price elsewhere.',
+      answer: 'Members enjoy high savings on accommodations compared to public rates. Our price match guarantee ensures you get the best deal, plus an additional 5% discount if you find a better price elsewhere.',
     },
     {
       question: 'Are there any hidden fees or annual costs?',

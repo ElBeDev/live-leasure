@@ -11,7 +11,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "Live-Leisure | Premium Travel Membership",
-  description: "Save up to 70% on your next vacation. Access exclusive deals on hotels, flights, cruises, tours and more in 70+ countries.",
+  description: "High savings on your next vacation. Access exclusive deals on hotels, flights, cruises, tours and more in 70+ countries.",
   keywords: ["travel", "vacation", "membership", "discounts", "hotels", "flights", "cruises"],
 };
 

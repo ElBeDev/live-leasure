@@ -32,7 +32,7 @@ export default function TestimonialsSection() {
       location: 'Miami, USA',
       avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&q=80',
       rating: 5,
-      text: 'As a family of 5, traveling was always expensive. With Live-Leisure, we get spacious condos and save 70% on hotels. We can finally afford to travel multiple times a year!',
+      text: 'As a family of 5, traveling was always expensive. With Live-Leisure, we get spacious condos and incredible savings on hotels. We can finally afford to travel multiple times a year!',
       trip: 'Family Vacation - Cancún',
     },
     {
