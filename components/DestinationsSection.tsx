@@ -13,60 +13,62 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
 export default function DestinationsSection() {
+  // Las imágenes deben estar en public/images/ con nombres en minúsculas y extensión .jpg
+  // Por ejemplo: dubai.jpg, bali.jpg, paris.jpg, cancun.jpg, tokyo.jpg, new-york.jpg, maldives.jpg, rome.jpg
   const destinations = [
     {
       name: 'Dubai',
       country: 'United Arab Emirates',
-      image: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&q=80',
+      image: '/images/dubai.jpg',
       rating: 4.9,
       properties: '1,250+',
     },
     {
       name: 'Bali',
       country: 'Indonesia',
-      image: 'https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800&q=80',
+      image: '/images/bali.jpg',
       rating: 4.8,
       properties: '980+',
     },
     {
       name: 'Paris',
       country: 'France',
-      image: 'https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800&q=80',
+      image: '/images/paris.jpg',
       rating: 4.9,
       properties: '2,100+',
     },
     {
       name: 'Cancún',
       country: 'Mexico',
-      image: 'https://images.unsplash.com/photo-1569003339405-ea396a5a8a90?w=800&q=80',
+      image: '/images/cancun.jpg',
       rating: 4.7,
       properties: '1,500+',
     },
     {
       name: 'Tokyo',
       country: 'Japan',
-      image: 'https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=800&q=80',
+      image: '/images/tokyo.jpg',
       rating: 4.9,
       properties: '1,800+',
     },
     {
       name: 'New York',
       country: 'United States',
-      image: 'https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=800&q=80',
+      image: '/images/new-york.jpg',
       rating: 4.8,
       properties: '3,200+',
     },
     {
       name: 'Maldives',
       country: 'Maldives',
-      image: 'https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=800&q=80',
+      image: '/images/maldives.jpg',
       rating: 5.0,
       properties: '450+',
     },
     {
       name: 'Rome',
       country: 'Italy',
-      image: 'https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=800&q=80',
+      image: '/images/rome.jpg',
       rating: 4.9,
       properties: '1,600+',
     },
