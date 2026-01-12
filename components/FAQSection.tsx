@@ -10,7 +10,11 @@ export default function FAQSection() {
   const faqs = [
     {
       question: 'What is Live-Leisure membership?',
-      answer: 'Live-Leisure is a premium travel club membership offering exclusive access to resort weeks all over the world, discounted hotels, flights, cruises, and more. For just $9.99 USD per month, you gain access to amazing savings on your vacations.',
+      answer: 'Live-Leisure is a lifetime travel club membership offering exclusive access to resort weeks worldwide, discounted hotels, flights, cruises, and more. Our AI-powered platform searches millions of options to find you the best rates. With a one-time membership fee, you gain access to high savings on your vacations for life.',
+    },
+    {
+      question: 'How does the AI-powered pricing work?',
+      answer: 'Our advanced AI algorithms continuously scan and compare millions of travel options across hundreds of providers in real-time. It analyzes pricing patterns, availability, and demand to automatically present you with the best possible rates—often better than what you\'d find searching manually.',
     },
     {
       question: 'How do Resort Weeks work?',

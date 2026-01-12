@@ -7,8 +7,8 @@ import { ArrowRight, Sparkles, Globe, Award } from 'lucide-react';
 export default function HeroSection() {
   const stats = [
     { icon: Globe, value: '70+', label: 'Worldwide' },
+    { icon: Sparkles, value: 'AI', label: 'Powered' },
     { icon: Award, value: 'High', label: 'Savings' },
-    { icon: Sparkles, value: '1M+', label: 'Hotels' },
   ];
 
   return (
@@ -82,7 +82,8 @@ export default function HeroSection() {
             transition={{ duration: 1, delay: 0.4, ease: [0.4, 0, 0.2, 1] }}
             className="text-xl md:text-2xl text-white drop-shadow-lg mb-12 max-w-3xl mx-auto font-medium"
           >
-            Access exclusive deals on hotels, flights, cruises, and tours worldwide. 
+            Access exclusive deals on hotels, flights, cruises, and tours worldwide.
+            Powered by AI to find you the best prices every time. 
             Your journey to exceptional vacations begins here.
           </motion.p>
 

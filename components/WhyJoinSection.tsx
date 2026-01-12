@@ -39,8 +39,8 @@ export default function WhyJoinSection() {
   const features = [
     {
       icon: Award,
-      title: 'Best Price Guarantee',
-      description: 'Find a better price? We\'ll match it plus give you an extra 5% discount.',
+      title: 'AI-Powered Best Prices',
+      description: 'Our AI constantly searches and compares millions of options to guarantee you the best rates available.',
     },
     {
       icon: TrendingUp,
