@@ -24,7 +24,7 @@ export default function BenefitsSection() {
     {
       icon: Hotel,
       title: 'Exclusive Hotel Rates',
-      description: '1+ million hotels with exclusive rates. Price Match Guarantee + 5% discount.',
+      description: 'Over 1 million hotels worldwide with exclusive rates. Price Match Guarantee + 5% discount.',
       gradient: 'from-[#0472ab] to-[#0472ab]',
     },
     {

@@ -45,10 +45,10 @@ export default function MultiCitySection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-            <span className="text-gradient">Multi-City</span> Travel Made Easy
+            <span className="text-gradient">AI-Powered Multi-City</span> Travel Made Easy
           </h2>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-            Why limit your trip to one destination? Create seamless itineraries with multiple stops—all in one simple booking.
+            Why limit your trip to one destination? Our AI creates seamless itineraries with multiple stops, finding the best prices and perfect connections—all in one simple booking.
           </p>
         </motion.div>
 
@@ -102,8 +102,8 @@ export default function MultiCitySection() {
             <p className="text-gray-400">Book everything in a single transaction</p>
           </div>
           <div className="glass p-8 rounded-2xl border border-white/10 text-center">
-            <h3 className="text-4xl font-bold text-gradient mb-2">Best Rates</h3>
-            <p className="text-gray-400">Package deals save you more money</p>
+            <h3 className="text-4xl font-bold text-gradient mb-2">AI-Powered Rates</h3>
+            <p className="text-gray-400">Our AI finds the best package deals automatically</p>
           </div>
           <div className="glass p-8 rounded-2xl border border-white/10 text-center">
             <h3 className="text-4xl font-bold text-gradient mb-2">Seamless</h3>

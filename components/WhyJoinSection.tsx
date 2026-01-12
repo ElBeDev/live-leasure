@@ -30,9 +30,9 @@ export default function WhyJoinSection() {
       icon: DollarSign,
       end: null,
       suffix: '',
-      label: 'Amazing Savings',
+      label: 'High Savings',
       description: 'On your vacations',
-      displayText: 'Amazing',
+      displayText: 'High',
     },
   ];
 
@@ -44,8 +44,8 @@ export default function WhyJoinSection() {
     },
     {
       icon: TrendingUp,
-      title: 'Monthly Membership',
-      description: 'Just $9.99 USD per month for unlimited access to exclusive travel deals worldwide.',
+      title: 'Lifetime Membership',
+      description: 'One-time payment for lifetime access to exclusive travel deals worldwide.',
     },
     {
       icon: Shield,
@@ -55,7 +55,7 @@ export default function WhyJoinSection() {
   ];
 
   return (
-    <section id="why-join" className="py-24 relative overflow-hidden bg-white">
+    <section id="why-join" className="py-24 relative overflow-hidden bg-gradient-to-br from-cool-50 via-warm-50 to-cool-100">
       {/* Tropical background */}
       <div className="absolute inset-0 opacity-10" style={{
         backgroundImage: 'radial-gradient(circle at 20% 50%, rgba(4, 114, 171, 0.2) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(4, 114, 171, 0.2) 0%, transparent 50%)'

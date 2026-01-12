@@ -25,12 +25,12 @@ export default function HotelsShowcase() {
             Stay Your Way, <span className="text-gradient">Anywhere</span>
           </h2>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto mb-8">
-            Access to 632,153+ hotels worldwide, from boutique accommodations to globally recognized brands.
+            Access to over 1 million hotels worldwide, from boutique accommodations to globally recognized brands.
           </p>
           
           <div className="flex items-center justify-center gap-4 text-2xl font-bold">
             <Hotel className="text-[#0472ab]" size={32} />
-            <span className="text-gradient">632,153+</span>
+            <span className="text-gradient">1M+</span>
             <span className="text-gray-900">Hotels Worldwide</span>
           </div>
         </motion.div>

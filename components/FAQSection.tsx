@@ -10,7 +10,7 @@ export default function FAQSection() {
   const faqs = [
     {
       question: 'What is Live-Leisure membership?',
-      answer: 'Live-Leisure is a lifetime travel club membership offering exclusive access to resort weeks worldwide, discounted hotels, flights, cruises, and more. Our AI-powered platform searches millions of options to find you the best rates. With a one-time membership fee, you gain access to high savings on your vacations for life.',
+      answer: 'Live-Leisure is a lifetime travel club membership offering exclusive access to resort weeks worldwide, over 1 million hotels, discounted flights, cruises, and more. Our AI-powered platform searches millions of options to find you the best rates. With a one-time membership fee, you gain access to high savings on your vacations for life.',
     },
     {
       question: 'How does the AI-powered pricing work?',
