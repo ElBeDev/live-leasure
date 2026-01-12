@@ -59,14 +59,14 @@ export default function BenefitsSection() {
     },
     {
       icon: Package,
-      title: 'Travel Packages',
-      description: 'Plan seamless trips with flights, hotels, and curated experiences.',
+      title: 'AI-Powered Travel Packages',
+      description: 'Our AI finds the best prices on custom packages with flights, hotels, and curated experiences tailored just for you.',
       gradient: 'from-[#0472ab] to-[#0472ab]',
     },
     {
       icon: Globe,
-      title: 'Multi-City Packages',
-      description: 'Explore multiple cities with hotels, airfare, transfers, and activities.',
+      title: 'AI Multi-City Packages',
+      description: 'AI-assisted planning for multi-destination trips with optimized routes, hotels, flights, and activities at the best prices.',
       gradient: 'from-[#0472ab] to-[#0472ab]',
     },
     {

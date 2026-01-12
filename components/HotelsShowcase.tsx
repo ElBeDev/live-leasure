@@ -6,7 +6,7 @@ import { Hotel, Building2, Star, Search } from 'lucide-react';
 export default function HotelsShowcase() {
   const hotelBrands = [
     'Marriott', 'Hilton', 'Hyatt', 'InterContinental', 'Radisson',
-    'Best Western', 'Holiday Inn', 'Sheraton', 'Wyndham', 'Accor'
+    'Best Western', 'Holiday Inn', 'Sheraton', 'Wyndham', 'Royalton'
   ];
 
   return (

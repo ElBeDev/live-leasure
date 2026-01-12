@@ -28,10 +28,11 @@ export default function WhyJoinSection() {
     },
     {
       icon: DollarSign,
-      end: 70,
-      suffix: '%',
-      label: 'Average Savings',
+      end: null,
+      suffix: '',
+      label: 'Amazing Savings',
       description: 'On your vacations',
+      displayText: 'Amazing',
     },
   ];
 
@@ -43,8 +44,8 @@ export default function WhyJoinSection() {
     },
     {
       icon: TrendingUp,
-      title: 'Lifetime Membership',
-      description: 'One-time payment for lifetime access to exclusive travel deals worldwide.',
+      title: 'Monthly Membership',
+      description: 'Just $9.99 USD per month for unlimited access to exclusive travel deals worldwide.',
     },
     {
       icon: Shield,
@@ -128,7 +129,7 @@ function StatCard({ stat, index, inView }: any) {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    if (!inView) return;
+    if (!inView || stat.end === null) return;
 
     let startTime: number;
     const duration = 2000;
@@ -167,7 +168,7 @@ function StatCard({ stat, index, inView }: any) {
         <stat.icon className="text-white" size={36} />
       </motion.div>
       <div className="text-5xl md:text-6xl font-bold text-white mb-2">
-        {count.toLocaleString()}{stat.suffix}
+        {stat.displayText ? stat.displayText : `${count.toLocaleString()}${stat.suffix}`}
       </div>
       <div className="text-xl font-semibold text-[#0472ab] mb-2">
         {stat.label}

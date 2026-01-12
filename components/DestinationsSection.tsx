@@ -101,7 +101,7 @@ export default function DestinationsSection() {
           <div className="flex items-center justify-center gap-8 text-gray-300">
             <div className="flex items-center gap-2">
               <MapPin className="text-[#0472ab]" size={20} />
-              <span className="font-semibold">70+ Countries</span>
+              <span className="font-semibold">All Over the World</span>
             </div>
             <div className="flex items-center gap-2">
               <Star className="text-primary-gold" size={20} />

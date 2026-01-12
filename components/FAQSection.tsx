@@ -10,7 +10,7 @@ export default function FAQSection() {
   const faqs = [
     {
       question: 'What is Live-Leisure membership?',
-      answer: 'Live-Leisure is a lifetime travel club membership offering exclusive access to resort weeks in 70+ countries, discounted hotels, flights, cruises, and more. With a one-time membership fee, you gain access to high savings on your vacations for life.',
+      answer: 'Live-Leisure is a premium travel club membership offering exclusive access to resort weeks all over the world, discounted hotels, flights, cruises, and more. For just $9.99 USD per month, you gain access to amazing savings on your vacations.',
     },
     {
       question: 'How do Resort Weeks work?',
@@ -26,11 +26,7 @@ export default function FAQSection() {
     },
     {
       question: 'Are there any hidden fees or annual costs?',
-      answer: 'No hidden fees! Live-Leisure is a one-time lifetime membership. You only pay for your bookings (resort weeks, hotels, flights, etc.) at our exclusive member rates. No annual renewals or surprise charges.',
-    },
-    {
-      question: 'Can I book for family and friends?',
-      answer: 'Absolutely! Your membership allows you to book travel for yourself, family members, and friends. Share the benefits of your membership with your loved ones.',
+      answer: 'No hidden fees! Live-Leisure membership costs just $9.99 USD per month. You only pay for your bookings (resort weeks, hotels, flights, etc.) at our exclusive member rates. Cancel anytime.',
     },
     {
       question: 'How far in advance can I book?',
