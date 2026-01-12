@@ -10,7 +10,7 @@ export default function HotelsShowcase() {
   ];
 
   return (
-    <section className="py-24 relative overflow-hidden bg-gradient-to-br from-warm-100 via-cool-50 to-warm-50">
+    <section className="py-24 relative overflow-hidden bg-cool-50">
       {/* Luxury hotel ambient */}
       <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#0472ab]/15 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '6s' }} />
       

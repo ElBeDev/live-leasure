@@ -5,7 +5,7 @@ import { MapPin, Mail, Phone, Clock } from 'lucide-react';
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="py-24 relative overflow-hidden bg-gradient-to-b from-warm-100 via-cool-100 to-warm-50">
+    <section id="contact" className="py-24 relative overflow-hidden bg-warm-50">
       {/* Contact section with welcoming ambiance */}
       <div className="absolute top-0 left-1/3 w-96 h-96 bg-[#0472ab]/15 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '7s' }} />
       <div className="absolute bottom-0 right-1/3 w-80 h-80 bg-[#0472ab]/12 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '8s' }} />

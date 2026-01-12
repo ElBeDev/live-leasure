@@ -60,7 +60,7 @@ export default function ResortWeeksSection() {
   ];
 
   return (
-    <section id="pricing" className="py-24 relative overflow-hidden bg-gradient-to-br from-warm-100 via-cool-100 to-warm-50">
+    <section id="pricing" className="py-24 relative overflow-hidden bg-white">
       {/* Tropical ambient lighting */}
       <div className="absolute top-0 left-1/3 w-96 h-96 bg-[#0472ab]/15 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '7s' }} />
       <div className="absolute bottom-0 right-1/3 w-96 h-96 bg-[#0472ab]/12 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '8s' }} />

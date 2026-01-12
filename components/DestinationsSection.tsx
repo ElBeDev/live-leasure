@@ -75,7 +75,7 @@ export default function DestinationsSection() {
   ];
 
   return (
-    <section id="destinations" className="py-24 relative overflow-hidden bg-gradient-to-b from-cool-50 via-warm-50 to-cool-100">
+    <section id="destinations" className="py-24 relative overflow-hidden bg-white">
       {/* World map subtle pattern */}
       <div className="absolute inset-0 opacity-[0.04]" style={{
         backgroundImage: 'url("data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"%3E%3Cpath fill="%23FF8C42" d="M0,300 Q150,250 300,300 T600,300 T900,300 T1200,300 L1200,600 L0,600 Z"/%3E%3C/svg%3E")',

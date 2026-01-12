@@ -55,7 +55,7 @@ export default function WhyJoinSection() {
   ];
 
   return (
-    <section id="why-join" className="py-24 relative overflow-hidden bg-gradient-to-br from-cool-50 via-warm-50 to-cool-100">
+    <section id="why-join" className="py-24 relative overflow-hidden bg-white">
       {/* Tropical background */}
       <div className="absolute inset-0 opacity-10" style={{
         backgroundImage: 'radial-gradient(circle at 20% 50%, rgba(4, 114, 171, 0.2) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(4, 114, 171, 0.2) 0%, transparent 50%)'

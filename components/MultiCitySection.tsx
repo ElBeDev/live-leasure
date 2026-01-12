@@ -28,7 +28,7 @@ export default function MultiCitySection() {
   ];
 
   return (
-    <section className="py-24 relative overflow-hidden bg-gradient-to-br from-cool-100 via-warm-100 to-cool-50">
+    <section className="py-24 relative overflow-hidden bg-cool-50">
       {/* Travel route visualization ambiance */}
       <div className="absolute inset-0 opacity-[0.04]" style={{
         backgroundImage: 'linear-gradient(90deg, rgba(4, 114, 171, 0.15) 1px, transparent 1px), linear-gradient(180deg, rgba(4, 114, 171, 0.15) 1px, transparent 1px)',

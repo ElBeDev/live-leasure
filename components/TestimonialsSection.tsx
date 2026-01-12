@@ -54,7 +54,7 @@ export default function TestimonialsSection() {
   ];
 
   return (
-    <section className="py-24 relative overflow-hidden bg-gradient-to-b from-warm-50 via-cool-50 to-warm-100">
+    <section className="py-24 relative overflow-hidden bg-warm-50">
       {/* Warm testimonial ambiance */}
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#0472ab]/15 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '6s' }} />
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#0472ab]/12 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '8s' }} />

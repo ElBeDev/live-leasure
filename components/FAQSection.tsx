@@ -47,7 +47,7 @@ export default function FAQSection() {
   ];
 
   return (
-    <section id="faq" className="py-24 relative overflow-hidden bg-gradient-to-br from-cool-100 via-warm-50 to-cool-50">
+    <section id="faq" className="py-24 relative overflow-hidden bg-cool-50">
       {/* Clean, professional FAQ ambiance */}
       <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-[#0472ab]/12 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '7s' }} />
       <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-[#0472ab]/12 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '8s' }} />
