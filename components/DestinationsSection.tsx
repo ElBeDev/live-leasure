@@ -156,6 +156,8 @@ export default function DestinationsSection() {
                       src={destination.image}
                       alt={destination.name}
                       fill
+                      priority={index < 3}
+                      sizes="(max-width: 768px) 100vw, 350px"
                       className="object-cover transition-transform duration-500 group-hover:scale-110"
                     />
                     
