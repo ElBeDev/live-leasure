@@ -6,7 +6,7 @@ import { ArrowRight, Sparkles, Globe, Award } from 'lucide-react';
 
 export default function HeroSection() {
   const stats = [
-    { icon: Globe, value: '70+', label: 'Countries' },
+    { icon: Globe, value: '70+', label: 'Worldwide' },
     { icon: Award, value: 'High', label: 'Savings' },
     { icon: Sparkles, value: '1M+', label: 'Hotels' },
   ];
@@ -82,7 +82,7 @@ export default function HeroSection() {
             transition={{ duration: 1, delay: 0.4, ease: [0.4, 0, 0.2, 1] }}
             className="text-xl md:text-2xl text-white drop-shadow-lg mb-12 max-w-3xl mx-auto font-medium"
           >
-            Access exclusive deals on hotels, flights, cruises, and tours in over 70 countries. 
+            Access exclusive deals on hotels, flights, cruises, and tours worldwide. 
             Your journey to exceptional vacations begins here.
           </motion.p>
 

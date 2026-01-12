@@ -98,7 +98,7 @@ export default function DestinationsSection() {
             Explore <span className="text-gradient">Destinations</span>
           </h2>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto mb-4">
-            From tropical getaways to city escapes, choose from 133,028+ destinations in over 70 countries.
+            From tropical getaways to city escapes, choose from 133,028+ destinations worldwide.
           </p>
           <div className="flex items-center justify-center gap-8 text-gray-300">
             <div className="flex items-center gap-2">

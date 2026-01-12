@@ -42,7 +42,7 @@ export default function BenefitsSection() {
     {
       icon: MapPin,
       title: 'Vacation Rentals',
-      description: 'Resort-style accommodations in fully equipped condos across 75+ countries.',
+      description: 'Resort-style accommodations in fully equipped condos worldwide.',
       gradient: 'from-[#0472ab] to-[#0472ab]',
     },
     {
