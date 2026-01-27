@@ -43,13 +43,13 @@ export default function Navbar() {
           <Link href="/" className="flex items-center space-x-2 group">
             <motion.div
               whileHover={{ scale: 1.05 }}
-              className="relative w-32 h-12"
+              className="relative w-48 h-16"
             >
               <Image
-                src="/images/LogoL.png"
+                src={isScrolled ? "/images/LogoLB.png" : "/images/LogoL.png"}
                 alt="Live-Leisure"
                 fill
-                className="object-contain"
+                className="object-contain transition-opacity duration-300"
                 priority
               />
             </motion.div>

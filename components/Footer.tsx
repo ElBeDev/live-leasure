@@ -2,35 +2,30 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { Facebook, Instagram, Twitter, Mail, Phone, MapPin } from 'lucide-react';
+import { Facebook, Instagram, Mail, Phone, MapPin } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function Footer() {
   const footerLinks = {
-    Company: [
-      { label: 'About Us', href: '/about' },
-      { label: 'Careers', href: '/careers' },
-      { label: 'Press', href: '/press' },
-      { label: 'Blog', href: '/blog' },
-    ],
-    Services: [
-      { label: 'Hotels', href: '/hotels' },
-      { label: 'Flights', href: '/flights' },
-      { label: 'Cruises', href: '/cruises' },
-      { label: 'Tours', href: '/tours' },
+    Navigation: [
+      { label: 'Benefits', href: '#benefits' },
+      { label: 'Why Join', href: '#why-join' },
+      { label: 'Pricing', href: '#pricing' },
+      { label: 'Destinations', href: '#destinations' },
     ],
     Support: [
-      { label: 'Help Center', href: '/help' },
-      { label: 'Contact Us', href: '/contact' },
-      { label: 'FAQ', href: '/faq' },
-      { label: 'Terms', href: '/terms' },
+      { label: 'Contact Us', href: '#contact' },
+      { label: 'FAQ', href: '#faq' },
+    ],
+    Legal: [
+      { label: 'Terms & Conditions', href: '/terms' },
+      { label: 'Privacy Policy', href: '/privacy' },
     ],
   };
 
   const socialLinks = [
     { icon: Facebook, href: '#', label: 'Facebook' },
     { icon: Instagram, href: '#', label: 'Instagram' },
-    { icon: Twitter, href: '#', label: 'Twitter' },
   ];
 
   return (
@@ -47,7 +42,7 @@ export default function Footer() {
               className="relative w-40 h-16 mb-4"
             >
               <Image
-                src="/images/LogoL.png"
+                src="/images/LogoLB.png"
                 alt="Live-Leisure"
                 fill
                 className="object-contain object-left"
@@ -61,15 +56,19 @@ export default function Footer() {
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-gray-400">
                 <MapPin size={18} className="text-[#0472ab]" />
-                <span>Playa del Carmen, México</span>
+                <span>2688 SW 137 Avenue. Miami, Florida. 33175</span>
               </div>
               <div className="flex items-center space-x-3 text-gray-400">
                 <Phone size={18} className="text-[#0472ab]" />
-                <span>+1 (555) 123-4567</span>
+                <span>+1 305 907 6068</span>
               </div>
               <div className="flex items-center space-x-3 text-gray-400">
                 <Mail size={18} className="text-[#0472ab]" />
-                <span>hello@live-leisure.com</span>
+                <span>reservations@vacancyrewards.com</span>
+              </div>
+              <div className="flex items-center space-x-3 text-gray-400">
+                <Mail size={18} className="text-[#0472ab]" />
+                <span>reservations@live-leasure.com</span>
               </div>
             </div>
           </div>
@@ -146,16 +145,6 @@ export default function Footer() {
                   <social.icon size={20} />
                 </motion.a>
               ))}
-            </div>
-
-            {/* Legal Links */}
-            <div className="flex items-center space-x-6 text-sm text-gray-400">
-              <Link href="/privacy" className="hover:text-[#0472ab] transition-colors">
-                Privacy Policy
-              </Link>
-              <Link href="/terms" className="hover:text-[#0472ab] transition-colors">
-                Terms of Service
-              </Link>
             </div>
           </div>
         </div>

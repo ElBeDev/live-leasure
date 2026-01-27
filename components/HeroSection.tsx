@@ -19,7 +19,7 @@ export default function HeroSection() {
         <div 
           className="absolute inset-0 opacity-50"
           style={{
-            backgroundImage: 'url("https://images.unsplash.com/photo-1506929562872-bb421503ef21?w=1920&q=80")',
+            backgroundImage: 'url("/images/1.jpeg")',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             filter: 'blur(2px)'

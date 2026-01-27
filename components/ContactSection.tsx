@@ -57,8 +57,7 @@ export default function ContactSection() {
                   <div>
                     <h4 className="text-gray-900 font-semibold mb-1">Phone</h4>
                     <p className="text-gray-700">
-                      +1 (555) 123-4567<br />
-                      +52 55 1234 5678
+                      +1 305 907 6068
                     </p>
                   </div>
                 </div>
@@ -69,7 +68,10 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <h4 className="text-gray-900 font-semibold mb-1">Email</h4>
-                    <p className="text-gray-700">hello@live-leisure.com</p>
+                    <p className="text-gray-700">
+                      reservations@vacancyrewards.com<br />
+                      reservations@live-leasure.com
+                    </p>
                   </div>
                 </div>
 
