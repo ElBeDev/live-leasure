@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Menu, X, User, LogIn } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -41,10 +42,16 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2 group">
             <motion.div
-              whileHover={{ scale: 1.05, rotate: 5 }}
-              className="text-2xl font-bold text-gradient"
+              whileHover={{ scale: 1.05 }}
+              className="relative w-32 h-12"
             >
-              Live-Leisure
+              <Image
+                src="/images/LogoL.png"
+                alt="Live-Leisure"
+                fill
+                className="object-contain"
+                priority
+              />
             </motion.div>
           </Link>
 

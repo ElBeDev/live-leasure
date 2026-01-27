@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { Facebook, Instagram, Twitter, Mail, Phone, MapPin } from 'lucide-react';
 import { motion } from 'framer-motion';
 
@@ -39,14 +40,19 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
           {/* Brand Section */}
           <div className="lg:col-span-2">
-            <motion.h3
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-3xl font-bold text-gradient mb-4"
+              className="relative w-40 h-16 mb-4"
             >
-              Live-Leisure
-            </motion.h3>
+              <Image
+                src="/images/LogoL.png"
+                alt="Live-Leisure"
+                fill
+                className="object-contain object-left"
+              />
+            </motion.div>
             <p className="text-gray-400 mb-6">
               Your gateway to exclusive travel experiences. Our AI-powered platform finds you high savings on your next vacation with our premium membership.
             </p>
