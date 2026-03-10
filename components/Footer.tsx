@@ -64,10 +64,6 @@ export default function Footer() {
               </div>
               <div className="flex items-center space-x-3 text-gray-400">
                 <Mail size={18} className="text-[#0472ab]" />
-                <span>reservations@vacancyrewards.com</span>
-              </div>
-              <div className="flex items-center space-x-3 text-gray-400">
-                <Mail size={18} className="text-[#0472ab]" />
                 <span>reservations@live-leasure.com</span>
               </div>
             </div>

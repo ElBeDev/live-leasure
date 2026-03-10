@@ -71,7 +71,6 @@ export default function ContactSection() {
                   <div>
                     <h4 className="text-gray-900 font-semibold mb-1">Email</h4>
                     <p className="text-gray-700">
-                      reservations@vacancyrewards.com<br />
                       reservations@live-leasure.com
                     </p>
                   </div>
