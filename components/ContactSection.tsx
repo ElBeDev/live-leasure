@@ -44,8 +44,10 @@ export default function ContactSection() {
                   <div>
                     <h4 className="text-gray-900 font-semibold mb-1">Address</h4>
                     <p className="text-gray-700">
-                      2688 SW 137 Avenue<br />
-                      Miami, Florida 33175
+                      VILLAS VTA LOC C 46 INT A<br />
+                      VILLAS VTA<br />
+                      LAS GLORIAS C.P. 48333<br />
+                      PUERTO VALLARTA, JAL.
                     </p>
                   </div>
                 </div>
@@ -57,7 +59,7 @@ export default function ContactSection() {
                   <div>
                     <h4 className="text-gray-900 font-semibold mb-1">Phone</h4>
                     <p className="text-gray-700">
-                      +1 305 907 6068
+                      (305) 686-0653
                     </p>
                   </div>
                 </div>

@@ -56,11 +56,11 @@ export default function Footer() {
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-gray-400">
                 <MapPin size={18} className="text-[#0472ab]" />
-                <span>2688 SW 137 Avenue. Miami, Florida. 33175</span>
+                <span>VILLAS VTA LOC C 46 INT A, VILLAS VTA, LAS GLORIAS C.P. 48333, PUERTO VALLARTA, JAL.</span>
               </div>
               <div className="flex items-center space-x-3 text-gray-400">
                 <Phone size={18} className="text-[#0472ab]" />
-                <span>+1 305 907 6068</span>
+                <span>(305) 686-0653</span>
               </div>
               <div className="flex items-center space-x-3 text-gray-400">
                 <Mail size={18} className="text-[#0472ab]" />
