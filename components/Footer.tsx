@@ -56,7 +56,7 @@ export default function Footer() {
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-gray-400">
                 <MapPin size={18} className="text-[#0472ab]" />
-                <span>VILLAS VTA LOC C 46 INT A, VILLAS VTA, LAS GLORIAS C.P. 48333, PUERTO VALLARTA, JAL.</span>
+                <span>Villas Vta Loc C 46 Int A, Villas Vta, Las Glorias C.P. 48333, Puerto Vallarta, Jal.</span>
               </div>
               <div className="flex items-center space-x-3 text-gray-400">
                 <Phone size={18} className="text-[#0472ab]" />

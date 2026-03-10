@@ -44,10 +44,10 @@ export default function ContactSection() {
                   <div>
                     <h4 className="text-gray-900 font-semibold mb-1">Address</h4>
                     <p className="text-gray-700">
-                      VILLAS VTA LOC C 46 INT A<br />
-                      VILLAS VTA<br />
-                      LAS GLORIAS C.P. 48333<br />
-                      PUERTO VALLARTA, JAL.
+                      Villas Vta Loc C 46 Int A<br />
+                      Villas Vta<br />
+                      Las Glorias C.P. 48333<br />
+                      Puerto Vallarta, Jal.
                     </p>
                   </div>
                 </div>
