@@ -45,7 +45,7 @@ export default function ResortWeeksSection() {
       icon: Crown,
       type: 'VIP Weeks',
       price: 499,
-      priceRange: '499 - 1249',
+      priceRange: '499 - 2999',
       tagline: 'Premium Luxury Experience',
       gradient: 'from-[#0472ab] to-[#0472ab]',
       features: [

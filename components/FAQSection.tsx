@@ -18,11 +18,11 @@ export default function FAQSection() {
     },
     {
       question: 'How do Resort Weeks work?',
-      answer: 'Resort Weeks offer 7-night stays in fully equipped, resort-style condos. We have three types: Last Minute Weeks ($399) for bookings within 30 days, Smart Weeks ($499) for planning up to 6 months ahead, and VIP Weeks ($499-$1249) for premium luxury resorts.',
+      answer: 'Resort Weeks offer 7-night stays in fully equipped, resort-style condos. We have three types: Last Minute Weeks ($399) for bookings within 30 days, Smart Weeks ($499) for planning up to 6 months ahead, and VIP Weeks ($499-$2999) for premium luxury resorts.',
     },
     {
       question: 'What\'s the difference between Last Minute, Smart, and VIP Weeks?',
-      answer: 'Last Minute Weeks are perfect for spontaneous travel at $399 with 5,000+ daily options. Smart Weeks at $499 let you plan ahead (up to 6 months) with thousands of worldwide options. VIP Weeks ($499-$1249) offer premium accommodations at over 100,000 luxury resorts.',
+      answer: 'Last Minute Weeks are perfect for spontaneous travel at $399 with 5,000+ daily options. Smart Weeks at $499 let you plan ahead (up to 6 months) with thousands of worldwide options. VIP Weeks ($499-$2999) offer premium accommodations at over 100,000 luxury resorts.',
     },
     {
       question: 'How much can I really save with Live-Leisure?',
