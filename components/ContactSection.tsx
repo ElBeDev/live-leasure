@@ -59,7 +59,7 @@ export default function ContactSection() {
                   <div>
                     <h4 className="text-gray-900 font-semibold mb-1">Phone</h4>
                     <p className="text-gray-700">
-                      (305) 686-0653
+                      322 225 2985
                     </p>
                   </div>
                 </div>

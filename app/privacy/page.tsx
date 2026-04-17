@@ -179,7 +179,7 @@ export default function PrivacyPage() {
                 </p>
                 <div className="text-gray-700">
                   <p><strong>Email:</strong> reservations@live-leasure.com</p>
-                  <p><strong>Phone:</strong> +1 305 907 6068</p>
+                  <p><strong>Phone:</strong> 322 225 2985</p>
                   <p><strong>Address:</strong> 2688 SW 137 Avenue, Miami, Florida 33175</p>
                 </div>
               </section>
