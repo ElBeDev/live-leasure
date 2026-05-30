@@ -159,7 +159,7 @@ export default function BenefitsSection() {
                   transition={{ duration: 0.6 }}
                   className={`w-16 h-16 rounded-xl bg-gradient-to-br ${benefit.gradient} flex items-center justify-center mb-6 shadow-lg relative z-10`}
                 >
-                  <benefit.icon className="text-white" size={32} />
+                  <benefit.icon className="text-[#eee273]" size={32} />
                 </motion.div>
 
                 {/* Content */}
@@ -188,7 +188,7 @@ export default function BenefitsSection() {
           <motion.button
             whileHover={{ scale: 1.05, boxShadow: '0 0 40px rgba(0, 201, 167, 0.6)' }}
             whileTap={{ scale: 0.95 }}
-            className="px-10 py-4 bg-[#041c28] text-white rounded-full font-semibold text-lg shadow-2xl hover:bg-[#072d3e] transition-colors"
+            className="px-10 py-4 bg-[#041c28] text-[#eee273] rounded-full font-semibold text-lg shadow-2xl hover:bg-[#072d3e] transition-colors"
           >
             Unlock All Benefits
           </motion.button>

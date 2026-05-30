@@ -109,7 +109,7 @@ export default function WhyJoinSection() {
                 transition={{ duration: 0.3 }}
                 className="w-16 h-16 rounded-xl bg-[#041c28] flex items-center justify-center mb-6"
               >
-                <feature.icon className="text-white" size={32} />
+                <feature.icon className="text-[#eee273]" size={32} />
               </motion.div>
               <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-[#041c28] transition-colors">
                 {feature.title}
@@ -165,9 +165,9 @@ function StatCard({ stat, index, inView }: any) {
         transition={{ duration: 0.5, delay: index * 0.2 + 0.3, type: 'spring' }}
         className="w-20 h-20 mx-auto mb-6 rounded-full bg-[#041c28] flex items-center justify-center"
       >
-        <stat.icon className="text-white" size={36} />
+        <stat.icon className="text-[#eee273]" size={36} />
       </motion.div>
-      <div className="text-5xl md:text-6xl font-bold text-white mb-2">
+      <div className="text-5xl md:text-6xl font-bold text-[#eee273] mb-2">
         {stat.displayText ? stat.displayText : `${count.toLocaleString()}${stat.suffix}`}
       </div>
       <div className="text-xl font-semibold text-[#041c28] mb-2">

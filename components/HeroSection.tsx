@@ -49,7 +49,7 @@ export default function HeroSection() {
             className="inline-flex items-center space-x-2 px-4 py-2 glass-dark rounded-full mb-8 border border-white/20"
           >
             <Sparkles className="text-[#041c28]" size={20} />
-            <span className="text-white text-sm font-medium">Premium Travel Membership</span>
+            <span className="text-[#eee273] text-sm font-medium">Premium Travel Membership</span>
           </motion.div>
 
           {/* Main Headline with Typing Effect */}
@@ -57,7 +57,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2, ease: [0.4, 0, 0.2, 1] }}
-            className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6"
+            className="text-5xl md:text-7xl lg:text-8xl font-bold text-[#eee273] mb-6"
           >
             <TypeAnimation
               sequence={[
@@ -80,7 +80,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.4, ease: [0.4, 0, 0.2, 1] }}
-            className="text-xl md:text-2xl text-white drop-shadow-lg mb-12 max-w-3xl mx-auto font-medium"
+            className="text-xl md:text-2xl text-[#eee273] drop-shadow-lg mb-12 max-w-3xl mx-auto font-medium"
           >
             Access exclusive deals on hotels, flights, cruises, and tours worldwide.
             Powered by AI to find you the best prices every time. 
@@ -97,7 +97,7 @@ export default function HeroSection() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="group px-8 py-4 bg-[#041c28] text-white rounded-full font-semibold text-lg shadow-xl flex items-center space-x-2 hover:bg-[#072d3e] transition-colors"
+              className="group px-8 py-4 bg-[#041c28] text-[#eee273] rounded-full font-semibold text-lg shadow-xl flex items-center space-x-2 hover:bg-[#072d3e] transition-colors"
             >
               <span>Join Now</span>
               <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
@@ -106,7 +106,7 @@ export default function HeroSection() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 glass-dark text-white rounded-full font-semibold text-lg border border-white/30 hover:border-white/50 transition-colors backdrop-blur-md"
+              className="px-8 py-4 glass-dark text-[#eee273] rounded-full font-semibold text-lg border border-white/30 hover:border-white/50 transition-colors backdrop-blur-md"
             >
               Explore Benefits
             </motion.button>
@@ -129,7 +129,7 @@ export default function HeroSection() {
                 className="glass-dark p-6 rounded-2xl border border-white/20 backdrop-blur-md"
               >
                 <stat.icon className="text-[#041c28] mx-auto mb-3" size={32} />
-                <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
+                <div className="text-3xl font-bold text-[#eee273] mb-1">{stat.value}</div>
                 <div className="text-gray-400">{stat.label}</div>
               </motion.div>
             ))}

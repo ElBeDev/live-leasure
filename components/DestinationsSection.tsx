@@ -173,7 +173,7 @@ export default function DestinationsSection() {
                       viewport={{ once: true }}
                       transition={{ delay: index * 0.1 }}
                     >
-                      <h3 className="text-3xl font-bold text-white mb-2">
+                      <h3 className="text-3xl font-bold text-[#eee273] mb-2">
                         {destination.name}
                       </h3>
                       <p className="text-gray-300 mb-4 flex items-center gap-2">
@@ -184,9 +184,9 @@ export default function DestinationsSection() {
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-1">
                           <Star className="text-primary-gold fill-primary-gold" size={18} />
-                          <span className="text-white font-semibold">{destination.rating}</span>
+                          <span className="text-[#eee273] font-semibold">{destination.rating}</span>
                         </div>
-                        <div className="text-white font-semibold">
+                        <div className="text-[#eee273] font-semibold">
                           {destination.properties} Properties
                         </div>
                       </div>
@@ -197,7 +197,7 @@ export default function DestinationsSection() {
                   <motion.div
                     initial={{ opacity: 0, scale: 0 }}
                     whileHover={{ opacity: 1, scale: 1 }}
-                    className="absolute top-6 right-6 px-4 py-2 bg-[#041c28] rounded-full text-white font-semibold text-sm shadow-lg"
+                    className="absolute top-6 right-6 px-4 py-2 bg-[#041c28] rounded-full text-[#eee273] font-semibold text-sm shadow-lg"
                   >
                     View Deals
                   </motion.div>
@@ -218,7 +218,7 @@ export default function DestinationsSection() {
           <motion.button
             whileHover={{ scale: 1.05, boxShadow: '0 0 40px rgba(0, 201, 167, 0.6)' }}
             whileTap={{ scale: 0.95 }}
-            className="px-10 py-4 bg-[#041c28] text-white rounded-full font-semibold text-lg shadow-2xl hover:bg-[#072d3e] transition-colors"
+            className="px-10 py-4 bg-[#041c28] text-[#eee273] rounded-full font-semibold text-lg shadow-2xl hover:bg-[#072d3e] transition-colors"
           >
             Explore All Destinations
           </motion.button>

@@ -29,7 +29,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-dark-900 text-white pt-16 pb-8">
+    <footer className="bg-dark-900 text-[#eee273] pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
@@ -111,7 +111,7 @@ export default function Footer() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 type="submit"
-                className="px-8 py-3 bg-[#041c28] text-white rounded-full font-semibold hover:bg-[#072d3e] hover:shadow-lg transition-all"
+                className="px-8 py-3 bg-[#041c28] text-[#eee273] rounded-full font-semibold hover:bg-[#072d3e] hover:shadow-lg transition-all"
               >
                 Subscribe
               </motion.button>

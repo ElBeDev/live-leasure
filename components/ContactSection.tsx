@@ -39,7 +39,7 @@ export default function ContactSection() {
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-full bg-[#041c28] flex items-center justify-center flex-shrink-0">
-                    <MapPin className="text-white" size={20} />
+                    <MapPin className="text-[#eee273]" size={20} />
                   </div>
                   <div>
                     <h4 className="text-gray-900 font-semibold mb-1">Address</h4>
@@ -54,7 +54,7 @@ export default function ContactSection() {
 
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-full bg-[#041c28] flex items-center justify-center flex-shrink-0">
-                    <Phone className="text-white" size={20} />
+                    <Phone className="text-[#eee273]" size={20} />
                   </div>
                   <div>
                     <h4 className="text-gray-900 font-semibold mb-1">Phone</h4>
@@ -66,7 +66,7 @@ export default function ContactSection() {
 
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-full bg-[#041c28] flex items-center justify-center flex-shrink-0">
-                    <Mail className="text-white" size={20} />
+                    <Mail className="text-[#eee273]" size={20} />
                   </div>
                   <div>
                     <h4 className="text-gray-900 font-semibold mb-1">Email</h4>
@@ -78,7 +78,7 @@ export default function ContactSection() {
 
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-full bg-[#041c28] flex items-center justify-center flex-shrink-0">
-                    <Clock className="text-white" size={20} />
+                    <Clock className="text-[#eee273]" size={20} />
                   </div>
                   <div>
                     <h4 className="text-gray-900 font-semibold mb-1">24/7 Support</h4>
@@ -105,7 +105,7 @@ export default function ContactSection() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="px-8 py-3 bg-[#041c28] text-white rounded-full font-semibold shadow-lg hover:bg-[#072d3e] transition-colors"
+                  className="px-8 py-3 bg-[#041c28] text-[#eee273] rounded-full font-semibold shadow-lg hover:bg-[#072d3e] transition-colors"
                 >
                   Email Us Directly
                 </motion.button>

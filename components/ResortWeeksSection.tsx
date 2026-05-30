@@ -101,7 +101,7 @@ export default function ResortWeeksSection() {
               whileHover={{ y: -10, scale: 1.02 }}
               className={`relative p-8 rounded-3xl border-2 ${
                 resort.popular 
-                  ? 'bg-[#041c28] text-white border-[#041c28] shadow-2xl' 
+                  ? 'bg-[#041c28] text-[#eee273] border-[#041c28] shadow-2xl' 
                   : 'bg-white/80 backdrop-blur-sm text-gray-900 border-gray-200 hover:border-[#041c28]/50 shadow-lg'
               } transition-all duration-300`}
             >
@@ -111,7 +111,7 @@ export default function ResortWeeksSection() {
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
                   transition={{ delay: 0.5, type: 'spring' }}
-                  className="absolute -top-4 left-1/2 transform -translate-x-1/2 px-6 py-2 bg-[#041c28] rounded-full text-white font-semibold text-sm shadow-lg"
+                  className="absolute -top-4 left-1/2 transform -translate-x-1/2 px-6 py-2 bg-[#041c28] rounded-full text-[#eee273] font-semibold text-sm shadow-lg"
                 >
                   Most Popular
                 </motion.div>
@@ -127,19 +127,19 @@ export default function ResortWeeksSection() {
                     : 'bg-gradient-to-br ' + resort.gradient
                 } flex items-center justify-center shadow-lg`}
               >
-                <resort.icon className="text-white" size={40} />
+                <resort.icon className="text-[#eee273]" size={40} />
               </motion.div>
 
               {/* Type */}
               <h3 className={`text-3xl font-bold text-center mb-2 ${
-                resort.popular ? 'text-white' : 'text-gray-900'
+                resort.popular ? 'text-[#eee273]' : 'text-gray-900'
               }`}>
                 {resort.type}
               </h3>
 
               {/* Tagline */}
               <p className={`text-center mb-6 ${
-                resort.popular ? 'text-white/90' : 'text-gray-600'
+                resort.popular ? 'text-[#eee273]/90' : 'text-gray-600'
               }`}>
                 {resort.tagline}
               </p>
@@ -147,15 +147,15 @@ export default function ResortWeeksSection() {
               {/* Price */}
               <div className="text-center mb-8">
                 <div className="flex items-baseline justify-center gap-2">
-                  <span className={`text-2xl ${resort.popular ? 'text-white/80' : 'text-gray-600'}`}>$</span>
+                  <span className={`text-2xl ${resort.popular ? 'text-[#eee273]/80' : 'text-gray-600'}`}>$</span>
                   <span className={`text-6xl font-bold ${
-                    resort.popular ? 'text-white' : 'text-[#041c28]'
+                    resort.popular ? 'text-[#eee273]' : 'text-[#041c28]'
                   }`}>
                     {resort.priceRange || resort.price}
                   </span>
-                  <span className={`text-2xl ${resort.popular ? 'text-white/80' : 'text-gray-600'}`}>USD</span>
+                  <span className={`text-2xl ${resort.popular ? 'text-[#eee273]/80' : 'text-gray-600'}`}>USD</span>
                 </div>
-                <p className={`mt-2 ${resort.popular ? 'text-white/70' : 'text-gray-500'}`}>per 7-night stay</p>
+                <p className={`mt-2 ${resort.popular ? 'text-[#eee273]/70' : 'text-gray-500'}`}>per 7-night stay</p>
               </div>
 
               {/* Features */}
@@ -170,9 +170,9 @@ export default function ResortWeeksSection() {
                     className="flex items-start space-x-3"
                   >
                     <Check className={`flex-shrink-0 mt-1 ${
-                      resort.popular ? 'text-white' : 'text-[#041c28]'
+                      resort.popular ? 'text-[#eee273]' : 'text-[#041c28]'
                     }`} size={20} />
-                    <span className={resort.popular ? 'text-white/90' : 'text-gray-700'}>{feature}</span>
+                    <span className={resort.popular ? 'text-[#eee273]/90' : 'text-gray-700'}>{feature}</span>
                   </motion.li>
                 ))}
               </ul>
@@ -184,7 +184,7 @@ export default function ResortWeeksSection() {
                 className={`w-full py-4 rounded-full font-semibold text-lg transition-all duration-300 ${
                   resort.popular
                     ? 'bg-white text-[#041c28] shadow-lg hover:shadow-xl'
-                    : 'bg-[#041c28] text-white shadow-lg hover:shadow-xl hover:bg-[#072d3e]'
+                    : 'bg-[#041c28] text-[#eee273] shadow-lg hover:shadow-xl hover:bg-[#072d3e]'
                 }`}
               >
                 Book Now

@@ -73,7 +73,7 @@ export default function MultiCitySection() {
                     transition={{ duration: 0.6 }}
                     className="w-16 h-16 mx-auto mb-4 rounded-full bg-[#041c28] flex items-center justify-center shadow-lg"
                   >
-                    <step.icon className="text-white" size={28} />
+                    <step.icon className="text-[#eee273]" size={28} />
                   </motion.div>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{step.title}</h3>
                   <p className="text-gray-700 text-sm">{step.description}</p>
@@ -121,7 +121,7 @@ export default function MultiCitySection() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="px-10 py-4 bg-[#041c28] text-white rounded-full font-semibold text-lg shadow-2xl hover:bg-[#072d3e] transition-colors"
+            className="px-10 py-4 bg-[#041c28] text-[#eee273] rounded-full font-semibold text-lg shadow-2xl hover:bg-[#072d3e] transition-colors"
           >
             Plan Your Multi-City Trip
           </motion.button>
