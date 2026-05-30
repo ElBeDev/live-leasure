@@ -21,7 +21,7 @@ export default function TermsPage() {
           >
             <Link
               href="/"
-              className="inline-flex items-center gap-2 text-[#0472ab] hover:text-[#035a8a] transition-colors"
+              className="inline-flex items-center gap-2 text-[#041c28] hover:text-[#072d3e] transition-colors"
             >
               <ArrowLeft size={20} />
               <span>Back to Home</span>

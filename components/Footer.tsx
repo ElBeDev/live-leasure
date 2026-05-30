@@ -55,15 +55,15 @@ export default function Footer() {
             {/* Contact Info */}
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-gray-400">
-                <MapPin size={18} className="text-[#0472ab]" />
+                <MapPin size={18} className="text-[#041c28]" />
                 <span>Villas Vta Loc C 46 Int A, Villas Vta, Las Glorias C.P. 48333, Puerto Vallarta, Jal.</span>
               </div>
               <div className="flex items-center space-x-3 text-gray-400">
-                <Phone size={18} className="text-[#0472ab]" />
+                <Phone size={18} className="text-[#041c28]" />
                 <span>322 225 2985</span>
               </div>
               <div className="flex items-center space-x-3 text-gray-400">
-                <Mail size={18} className="text-[#0472ab]" />
+                <Mail size={18} className="text-[#041c28]" />
                 <span>reservations@live-leasure.com</span>
               </div>
             </div>
@@ -78,7 +78,7 @@ export default function Footer() {
                   <li key={link.label}>
                     <Link
                       href={link.href}
-                      className="text-gray-400 hover:text-[#0472ab] transition-colors duration-300"
+                      className="text-gray-400 hover:text-[#041c28] transition-colors duration-300"
                     >
                       {link.label}
                     </Link>
@@ -105,13 +105,13 @@ export default function Footer() {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-6 py-3 bg-dark-800 border border-gray-600 rounded-full focus:outline-none focus:border-[#0472ab] transition-colors"
+                className="flex-1 px-6 py-3 bg-dark-800 border border-gray-600 rounded-full focus:outline-none focus:border-[#041c28] transition-colors"
               />
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 type="submit"
-                className="px-8 py-3 bg-[#0472ab] text-white rounded-full font-semibold hover:bg-[#035d8c] hover:shadow-lg transition-all"
+                className="px-8 py-3 bg-[#041c28] text-white rounded-full font-semibold hover:bg-[#072d3e] hover:shadow-lg transition-all"
               >
                 Subscribe
               </motion.button>
@@ -135,7 +135,7 @@ export default function Footer() {
                   href={social.href}
                   whileHover={{ scale: 1.2, rotate: 5 }}
                   whileTap={{ scale: 0.9 }}
-                  className="w-10 h-10 rounded-full bg-dark-800 flex items-center justify-center hover:bg-[#0472ab] transition-all duration-300"
+                  className="w-10 h-10 rounded-full bg-dark-800 flex items-center justify-center hover:bg-[#041c28] transition-all duration-300"
                   aria-label={social.label}
                 >
                   <social.icon size={20} />

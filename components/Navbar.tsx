@@ -66,10 +66,10 @@ export default function Navbar() {
               >
                 <Link
                   href={link.href}
-                  className="text-white hover:text-[#0472ab] transition-colors duration-300 font-medium relative group"
+                  className="text-white hover:text-[#041c28] transition-colors duration-300 font-medium relative group"
                 >
                   {link.label}
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#0472ab] group-hover:w-full transition-all duration-300" />
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#041c28] group-hover:w-full transition-all duration-300" />
                 </Link>
               </motion.div>
             ))}
@@ -77,19 +77,20 @@ export default function Navbar() {
 
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center space-x-4">
-            <motion.button
+            <motion.a
+              href="https://login.live-leisure.com"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="flex items-center space-x-2 px-4 py-2 text-white hover:text-[#0472ab] transition-colors"
+              className="flex items-center space-x-2 px-4 py-2 text-white hover:text-[#041c28] transition-colors"
             >
               <LogIn size={20} />
               <span>Login</span>
-            </motion.button>
+            </motion.a>
             
             <motion.button
               whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(0, 201, 167, 0.5)' }}
               whileTap={{ scale: 0.95 }}
-              className="flex items-center space-x-2 px-6 py-3 bg-[#0472ab] text-white rounded-full font-semibold shadow-lg hover:bg-[#035d8c] transition-colors"
+              className="flex items-center space-x-2 px-6 py-3 bg-[#041c28] text-white rounded-full font-semibold shadow-lg hover:bg-[#072d3e] transition-colors"
             >
               <User size={20} />
               <span>Join Now</span>
@@ -122,17 +123,20 @@ export default function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="block text-white hover:text-[#0472ab] transition-colors py-2"
+                  className="block text-white hover:text-[#041c28] transition-colors py-2"
                 >
                   {link.label}
                 </Link>
               ))}
               <div className="pt-4 space-y-3 border-t border-white/20">
-                <button className="w-full flex items-center justify-center space-x-2 px-4 py-3 text-white border border-white/30 rounded-full hover:bg-white/10 transition-colors">
+                <a
+                  href="https://login.live-leisure.com"
+                  className="w-full flex items-center justify-center space-x-2 px-4 py-3 text-white border border-white/30 rounded-full hover:bg-white/10 transition-colors"
+                >
                   <LogIn size={20} />
                   <span>Login</span>
-                </button>
-                <button className="w-full flex items-center justify-center space-x-2 px-4 py-3 bg-[#0472ab] text-white rounded-full font-semibold">
+                </a>
+                <button className="w-full flex items-center justify-center space-x-2 px-4 py-3 bg-[#041c28] text-white rounded-full font-semibold">
                   <User size={20} />
                   <span>Join Now</span>
                 </button>

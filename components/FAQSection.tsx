@@ -53,9 +53,9 @@ export default function FAQSection() {
   return (
     <section id="faq" className="py-24 relative overflow-hidden bg-cool-50">
       {/* Clean, professional FAQ ambiance */}
-      <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-[#0472ab]/12 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '7s' }} />
-      <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-[#0472ab]/12 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '8s' }} />
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#0472ab]/10 rounded-full blur-3xl" />
+      <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-[#041c28]/12 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '7s' }} />
+      <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-[#041c28]/12 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '8s' }} />
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#041c28]/10 rounded-full blur-3xl" />
       
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
@@ -65,7 +65,7 @@ export default function FAQSection() {
           className="text-center mb-16"
         >
           <div className="flex items-center justify-center gap-3 mb-4">
-            <HelpCircle className="text-[#0472ab]" size={40} />
+            <HelpCircle className="text-[#041c28]" size={40} />
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
             Frequently Asked <span className="text-gradient">Questions</span>
@@ -88,8 +88,8 @@ export default function FAQSection() {
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
                 className={`w-full text-left bg-white/80 backdrop-blur-sm p-6 rounded-2xl border transition-all duration-300 shadow-lg hover:shadow-xl ${
                   openIndex === index
-                    ? 'border-[#0472ab] shadow-xl'
-                    : 'border-gray-200 hover:border-[#0472ab]/50'
+                    ? 'border-[#041c28] shadow-xl'
+                    : 'border-gray-200 hover:border-[#041c28]/50'
                 }`}
               >
                 <div className="flex items-center justify-between gap-4">
@@ -103,7 +103,7 @@ export default function FAQSection() {
                   >
                     <ChevronDown
                       className={`${
-                        openIndex === index ? 'text-[#0472ab]' : 'text-gray-600'
+                        openIndex === index ? 'text-[#041c28]' : 'text-gray-600'
                       } transition-colors`}
                       size={24}
                     />
@@ -143,7 +143,7 @@ export default function FAQSection() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="px-10 py-4 bg-[#0472ab] text-white rounded-full font-semibold text-lg shadow-2xl hover:bg-[#035d8c] transition-colors"
+            className="px-10 py-4 bg-[#041c28] text-white rounded-full font-semibold text-lg shadow-2xl hover:bg-[#072d3e] transition-colors"
           >
             Contact Support
           </motion.button>

@@ -25,55 +25,55 @@ export default function BenefitsSection() {
       icon: Hotel,
       title: 'Exclusive Hotel Rates',
       description: 'Over 1 million hotels worldwide with exclusive rates. Price Match Guarantee + 5% discount.',
-      gradient: 'from-[#0472ab] to-[#0472ab]',
+      gradient: 'from-[#041c28] to-[#041c28]',
     },
     {
       icon: Plane,
       title: 'Discounted Flights',
       description: 'Connect globally with 200+ airlines, including low-cost carriers.',
-      gradient: 'from-[#0472ab] to-[#0472ab]',
+      gradient: 'from-[#041c28] to-[#041c28]',
     },
     {
       icon: Ship,
       title: 'Member-only Cruises',
       description: 'Access to 25K+ cruise itineraries to navigate the seven seas.',
-      gradient: 'from-[#0472ab] to-[#0472ab]',
+      gradient: 'from-[#041c28] to-[#041c28]',
     },
     {
       icon: MapPin,
       title: 'Vacation Rentals',
       description: 'Resort-style accommodations in fully equipped condos worldwide.',
-      gradient: 'from-[#0472ab] to-[#0472ab]',
+      gradient: 'from-[#041c28] to-[#041c28]',
     },
     {
       icon: Ticket,
       title: 'Tours & Activities',
       description: 'Discover local experiences, theme parks, and entertainment tickets.',
-      gradient: 'from-[#0472ab] to-[#0472ab]',
+      gradient: 'from-[#041c28] to-[#041c28]',
     },
     {
       icon: Car,
       title: 'Wholesale Car Rentals',
       description: 'Discounted rates at over 10,000 pickup locations worldwide.',
-      gradient: 'from-[#0472ab] to-[#0472ab]',
+      gradient: 'from-[#041c28] to-[#041c28]',
     },
     {
       icon: Package,
       title: 'AI-Powered Travel Packages',
       description: 'Our AI finds the best prices on custom packages with flights, hotels, and curated experiences tailored just for you.',
-      gradient: 'from-[#0472ab] to-[#0472ab]',
+      gradient: 'from-[#041c28] to-[#041c28]',
     },
     {
       icon: Globe,
       title: 'AI Multi-City Packages',
       description: 'AI-assisted planning for multi-destination trips with optimized routes, hotels, flights, and activities at the best prices.',
-      gradient: 'from-[#0472ab] to-[#0472ab]',
+      gradient: 'from-[#041c28] to-[#041c28]',
     },
     {
       icon: Tag,
       title: 'My Deals at Home',
       description: 'Unlock discounts on 700,000+ merchants across North America.',
-      gradient: 'from-[#0472ab] to-[#0472ab]',
+      gradient: 'from-[#041c28] to-[#041c28]',
     },
   ];
 
@@ -108,9 +108,9 @@ export default function BenefitsSection() {
         backgroundSize: '60px 60px'
       }} />
       {/* Ambient Glows */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#0472ab]/15 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '5s' }} />
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#0472ab]/10 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '6s' }} />
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#0472ab]/8 rounded-full blur-3xl" />
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#041c28]/15 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '5s' }} />
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#041c28]/10 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '6s' }} />
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#041c28]/8 rounded-full blur-3xl" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
@@ -149,7 +149,7 @@ export default function BenefitsSection() {
               className="group relative"
             >
               {/* Card */}
-              <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl h-full border border-gray-200 hover:border-[#0472ab]/50 transition-all duration-300 relative overflow-hidden shadow-lg hover:shadow-xl">
+              <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl h-full border border-gray-200 hover:border-[#041c28]/50 transition-all duration-300 relative overflow-hidden shadow-lg hover:shadow-xl">
                 {/* Gradient Background on Hover */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${benefit.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-2xl`} />
 
@@ -163,7 +163,7 @@ export default function BenefitsSection() {
                 </motion.div>
 
                 {/* Content */}
-                <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-[#0472ab] transition-colors relative z-10">
+                <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-[#041c28] transition-colors relative z-10">
                   {benefit.title}
                 </h3>
                 <p className="text-gray-700 leading-relaxed relative z-10">
@@ -188,7 +188,7 @@ export default function BenefitsSection() {
           <motion.button
             whileHover={{ scale: 1.05, boxShadow: '0 0 40px rgba(0, 201, 167, 0.6)' }}
             whileTap={{ scale: 0.95 }}
-            className="px-10 py-4 bg-[#0472ab] text-white rounded-full font-semibold text-lg shadow-2xl hover:bg-[#035d8c] transition-colors"
+            className="px-10 py-4 bg-[#041c28] text-white rounded-full font-semibold text-lg shadow-2xl hover:bg-[#072d3e] transition-colors"
           >
             Unlock All Benefits
           </motion.button>

@@ -15,7 +15,7 @@ export default function HeroSection() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Beach/Travel Background Image */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-[#0472ab]/50" />
+        <div className="absolute inset-0 bg-[#041c28]/50" />
         <div 
           className="absolute inset-0 opacity-50"
           style={{
@@ -35,9 +35,9 @@ export default function HeroSection() {
       </div>
 
       {/* Luminous floating orbs */}
-      <div className="absolute top-20 left-10 w-72 h-72 bg-[#0472ab]/20 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '4s' }} />
-      <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#0472ab]/15 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '5s' }} />
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#0472ab]/10 rounded-full blur-3xl" />
+      <div className="absolute top-20 left-10 w-72 h-72 bg-[#041c28]/20 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '4s' }} />
+      <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#041c28]/15 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '5s' }} />
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#041c28]/10 rounded-full blur-3xl" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
         <div className="text-center">
@@ -48,7 +48,7 @@ export default function HeroSection() {
             transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
             className="inline-flex items-center space-x-2 px-4 py-2 glass-dark rounded-full mb-8 border border-white/20"
           >
-            <Sparkles className="text-[#0472ab]" size={20} />
+            <Sparkles className="text-[#041c28]" size={20} />
             <span className="text-white text-sm font-medium">Premium Travel Membership</span>
           </motion.div>
 
@@ -97,7 +97,7 @@ export default function HeroSection() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="group px-8 py-4 bg-[#0472ab] text-white rounded-full font-semibold text-lg shadow-xl flex items-center space-x-2 hover:bg-[#035d8c] transition-colors"
+              className="group px-8 py-4 bg-[#041c28] text-white rounded-full font-semibold text-lg shadow-xl flex items-center space-x-2 hover:bg-[#072d3e] transition-colors"
             >
               <span>Join Now</span>
               <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
@@ -128,7 +128,7 @@ export default function HeroSection() {
                 whileHover={{ scale: 1.05, y: -5 }}
                 className="glass-dark p-6 rounded-2xl border border-white/20 backdrop-blur-md"
               >
-                <stat.icon className="text-[#0472ab] mx-auto mb-3" size={32} />
+                <stat.icon className="text-[#041c28] mx-auto mb-3" size={32} />
                 <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
                 <div className="text-gray-400">{stat.label}</div>
               </motion.div>

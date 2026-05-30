@@ -13,15 +13,15 @@ const config: Config = {
         poppins: ['var(--font-poppins)', 'sans-serif'],
       },
       colors: {
-        brand: '#0472ab',
+        brand: '#041c28',
         primary: {
           orange: '#FF8C42',
           gold: '#FFB627',
-          teal: '#0472ab',
-          turquoise: '#0472ab',
+          teal: '#041c28',
+          turquoise: '#041c28',
           coral: '#FF6B6B',
           sand: '#F4E4C1',
-          ocean: '#0472ab',
+          ocean: '#041c28',
         },
         dark: {
           900: '#1A1A2E',
@@ -44,12 +44,12 @@ const config: Config = {
         }
       },
       backgroundImage: {
-        'gradient-1': 'linear-gradient(135deg, #0472ab 0%, #0472ab 100%)',
-        'gradient-2': 'linear-gradient(135deg, #0472ab 0%, #0472ab 100%)',
-        'gradient-3': 'linear-gradient(135deg, #0472ab 0%, #0472ab 100%)',
-        'gradient-ocean': 'linear-gradient(135deg, #0472ab 0%, #0472ab 100%)',
-        'gradient-sunset': 'linear-gradient(135deg, #0472ab 0%, #0472ab 100%)',
-        'gradient-tropical': 'linear-gradient(135deg, #0472ab 0%, #0472ab 100%)',
+        'gradient-1': 'linear-gradient(135deg, #041c28 0%, #041c28 100%)',
+        'gradient-2': 'linear-gradient(135deg, #041c28 0%, #041c28 100%)',
+        'gradient-3': 'linear-gradient(135deg, #041c28 0%, #041c28 100%)',
+        'gradient-ocean': 'linear-gradient(135deg, #041c28 0%, #041c28 100%)',
+        'gradient-sunset': 'linear-gradient(135deg, #041c28 0%, #041c28 100%)',
+        'gradient-tropical': 'linear-gradient(135deg, #041c28 0%, #041c28 100%)',
       },
       animation: {
         'float': 'float 6s ease-in-out infinite',

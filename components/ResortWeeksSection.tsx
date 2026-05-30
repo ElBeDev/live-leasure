@@ -16,7 +16,7 @@ export default function ResortWeeksSection() {
       type: 'Last Minute',
       price: 399,
       tagline: 'Spontaneity Made Affordable',
-      gradient: 'from-[#0472ab] to-[#0472ab]',
+      gradient: 'from-[#041c28] to-[#041c28]',
       features: [
         'Fixed price for every week',
         'Book within 30 days of check-in',
@@ -31,7 +31,7 @@ export default function ResortWeeksSection() {
       type: 'Smart Weeks',
       price: 499,
       tagline: 'Plan Ahead & Save',
-      gradient: 'from-[#0472ab] to-[#0472ab]',
+      gradient: 'from-[#041c28] to-[#041c28]',
       features: [
         'One price for all weeks',
         'Book up to 6 months in advance',
@@ -47,7 +47,7 @@ export default function ResortWeeksSection() {
       price: 499,
       priceRange: '499 - 2999',
       tagline: 'Premium Luxury Experience',
-      gradient: 'from-[#0472ab] to-[#0472ab]',
+      gradient: 'from-[#041c28] to-[#041c28]',
       features: [
         'Flexible pricing for premium stays',
         'Over 100,000 resort options',
@@ -62,9 +62,9 @@ export default function ResortWeeksSection() {
   return (
     <section id="pricing" className="py-24 relative overflow-hidden bg-white">
       {/* Tropical ambient lighting */}
-      <div className="absolute top-0 left-1/3 w-96 h-96 bg-[#0472ab]/15 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '7s' }} />
-      <div className="absolute bottom-0 right-1/3 w-96 h-96 bg-[#0472ab]/12 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '8s' }} />
-      <div className="absolute top-1/2 right-1/4 w-64 h-64 bg-[#0472ab]/10 rounded-full blur-2xl" />
+      <div className="absolute top-0 left-1/3 w-96 h-96 bg-[#041c28]/15 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '7s' }} />
+      <div className="absolute bottom-0 right-1/3 w-96 h-96 bg-[#041c28]/12 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '8s' }} />
+      <div className="absolute top-1/2 right-1/4 w-64 h-64 bg-[#041c28]/10 rounded-full blur-2xl" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
@@ -101,8 +101,8 @@ export default function ResortWeeksSection() {
               whileHover={{ y: -10, scale: 1.02 }}
               className={`relative p-8 rounded-3xl border-2 ${
                 resort.popular 
-                  ? 'bg-[#0472ab] text-white border-[#0472ab] shadow-2xl' 
-                  : 'bg-white/80 backdrop-blur-sm text-gray-900 border-gray-200 hover:border-[#0472ab]/50 shadow-lg'
+                  ? 'bg-[#041c28] text-white border-[#041c28] shadow-2xl' 
+                  : 'bg-white/80 backdrop-blur-sm text-gray-900 border-gray-200 hover:border-[#041c28]/50 shadow-lg'
               } transition-all duration-300`}
             >
               {/* Popular Badge */}
@@ -111,7 +111,7 @@ export default function ResortWeeksSection() {
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
                   transition={{ delay: 0.5, type: 'spring' }}
-                  className="absolute -top-4 left-1/2 transform -translate-x-1/2 px-6 py-2 bg-[#0472ab] rounded-full text-white font-semibold text-sm shadow-lg"
+                  className="absolute -top-4 left-1/2 transform -translate-x-1/2 px-6 py-2 bg-[#041c28] rounded-full text-white font-semibold text-sm shadow-lg"
                 >
                   Most Popular
                 </motion.div>
@@ -149,7 +149,7 @@ export default function ResortWeeksSection() {
                 <div className="flex items-baseline justify-center gap-2">
                   <span className={`text-2xl ${resort.popular ? 'text-white/80' : 'text-gray-600'}`}>$</span>
                   <span className={`text-6xl font-bold ${
-                    resort.popular ? 'text-white' : 'text-[#0472ab]'
+                    resort.popular ? 'text-white' : 'text-[#041c28]'
                   }`}>
                     {resort.priceRange || resort.price}
                   </span>
@@ -170,7 +170,7 @@ export default function ResortWeeksSection() {
                     className="flex items-start space-x-3"
                   >
                     <Check className={`flex-shrink-0 mt-1 ${
-                      resort.popular ? 'text-white' : 'text-[#0472ab]'
+                      resort.popular ? 'text-white' : 'text-[#041c28]'
                     }`} size={20} />
                     <span className={resort.popular ? 'text-white/90' : 'text-gray-700'}>{feature}</span>
                   </motion.li>
@@ -183,8 +183,8 @@ export default function ResortWeeksSection() {
                 whileTap={{ scale: 0.95 }}
                 className={`w-full py-4 rounded-full font-semibold text-lg transition-all duration-300 ${
                   resort.popular
-                    ? 'bg-white text-[#0472ab] shadow-lg hover:shadow-xl'
-                    : 'bg-[#0472ab] text-white shadow-lg hover:shadow-xl hover:bg-[#035d8c]'
+                    ? 'bg-white text-[#041c28] shadow-lg hover:shadow-xl'
+                    : 'bg-[#041c28] text-white shadow-lg hover:shadow-xl hover:bg-[#072d3e]'
                 }`}
               >
                 Book Now

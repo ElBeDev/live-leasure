@@ -82,8 +82,8 @@ export default function DestinationsSection() {
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }} />
-      <div className="absolute top-1/2 left-0 w-96 h-96 bg-[#0472ab]/15 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '7s' }} />
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#0472ab]/12 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '8s' }} />
+      <div className="absolute top-1/2 left-0 w-96 h-96 bg-[#041c28]/15 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '7s' }} />
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#041c28]/12 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '8s' }} />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
@@ -102,7 +102,7 @@ export default function DestinationsSection() {
           </p>
           <div className="flex items-center justify-center gap-8 text-gray-300">
             <div className="flex items-center gap-2">
-              <MapPin className="text-[#0472ab]" size={20} />
+              <MapPin className="text-[#041c28]" size={20} />
               <span className="font-semibold">All Over the World</span>
             </div>
             <div className="flex items-center gap-2">
@@ -197,7 +197,7 @@ export default function DestinationsSection() {
                   <motion.div
                     initial={{ opacity: 0, scale: 0 }}
                     whileHover={{ opacity: 1, scale: 1 }}
-                    className="absolute top-6 right-6 px-4 py-2 bg-[#0472ab] rounded-full text-white font-semibold text-sm shadow-lg"
+                    className="absolute top-6 right-6 px-4 py-2 bg-[#041c28] rounded-full text-white font-semibold text-sm shadow-lg"
                   >
                     View Deals
                   </motion.div>
@@ -218,7 +218,7 @@ export default function DestinationsSection() {
           <motion.button
             whileHover={{ scale: 1.05, boxShadow: '0 0 40px rgba(0, 201, 167, 0.6)' }}
             whileTap={{ scale: 0.95 }}
-            className="px-10 py-4 bg-[#0472ab] text-white rounded-full font-semibold text-lg shadow-2xl hover:bg-[#035d8c] transition-colors"
+            className="px-10 py-4 bg-[#041c28] text-white rounded-full font-semibold text-lg shadow-2xl hover:bg-[#072d3e] transition-colors"
           >
             Explore All Destinations
           </motion.button>
@@ -231,7 +231,7 @@ export default function DestinationsSection() {
         }
         
         .destinations-swiper .swiper-pagination-bullet {
-          background: #0472ab !important;
+          background: #041c28 !important;
           opacity: 0.5;
         }
         
@@ -243,7 +243,7 @@ export default function DestinationsSection() {
         
         .destinations-swiper .swiper-button-next,
         .destinations-swiper .swiper-button-prev {
-          color: #0472ab !important;
+          color: #041c28 !important;
           background: rgba(4, 114, 171, 0.1);
           backdrop-filter: blur(10px);
           width: 50px;

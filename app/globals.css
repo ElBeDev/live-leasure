@@ -30,7 +30,7 @@
   }
 
   .text-gradient {
-    color: #0472ab;
+    color: #041c28;
   }
 
   .hover-lift {
@@ -66,12 +66,12 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #0472ab;
+  background: #041c28;
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #035d8c;
+  background: #072d3e;
 }
 
 /* Selection */

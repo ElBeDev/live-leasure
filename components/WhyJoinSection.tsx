@@ -60,8 +60,8 @@ export default function WhyJoinSection() {
       <div className="absolute inset-0 opacity-10" style={{
         backgroundImage: 'radial-gradient(circle at 20% 50%, rgba(4, 114, 171, 0.2) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(4, 114, 171, 0.2) 0%, transparent 50%)'
       }} />
-      <div className="absolute top-1/4 right-0 w-96 h-96 bg-[#0472ab]/15 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '6s' }} />
-      <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-[#0472ab]/15 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '7s' }} />
+      <div className="absolute top-1/4 right-0 w-96 h-96 bg-[#041c28]/15 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '6s' }} />
+      <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-[#041c28]/15 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '7s' }} />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
@@ -102,16 +102,16 @@ export default function WhyJoinSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl border border-gray-200 hover:border-[#0472ab]/50 transition-all duration-300 group shadow-lg hover:shadow-xl"
+              className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl border border-gray-200 hover:border-[#041c28]/50 transition-all duration-300 group shadow-lg hover:shadow-xl"
             >
               <motion.div
                 whileHover={{ scale: 1.1, rotate: 5 }}
                 transition={{ duration: 0.3 }}
-                className="w-16 h-16 rounded-xl bg-[#0472ab] flex items-center justify-center mb-6"
+                className="w-16 h-16 rounded-xl bg-[#041c28] flex items-center justify-center mb-6"
               >
                 <feature.icon className="text-white" size={32} />
               </motion.div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-[#0472ab] transition-colors">
+              <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-[#041c28] transition-colors">
                 {feature.title}
               </h3>
               <p className="text-gray-700 leading-relaxed">
@@ -156,21 +156,21 @@ function StatCard({ stat, index, inView }: any) {
       whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6, delay: index * 0.2 }}
-      className="glass-dark p-8 rounded-2xl border border-white/10 hover:border-[#0472ab]/50 transition-all duration-300 text-center group hover:scale-105"
+      className="glass-dark p-8 rounded-2xl border border-white/10 hover:border-[#041c28]/50 transition-all duration-300 text-center group hover:scale-105"
     >
       <motion.div
         initial={{ scale: 0 }}
         whileInView={{ scale: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5, delay: index * 0.2 + 0.3, type: 'spring' }}
-        className="w-20 h-20 mx-auto mb-6 rounded-full bg-[#0472ab] flex items-center justify-center"
+        className="w-20 h-20 mx-auto mb-6 rounded-full bg-[#041c28] flex items-center justify-center"
       >
         <stat.icon className="text-white" size={36} />
       </motion.div>
       <div className="text-5xl md:text-6xl font-bold text-white mb-2">
         {stat.displayText ? stat.displayText : `${count.toLocaleString()}${stat.suffix}`}
       </div>
-      <div className="text-xl font-semibold text-[#0472ab] mb-2">
+      <div className="text-xl font-semibold text-[#041c28] mb-2">
         {stat.label}
       </div>
       <p className="text-gray-400">

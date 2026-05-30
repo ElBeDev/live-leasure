@@ -56,8 +56,8 @@ export default function TestimonialsSection() {
   return (
     <section className="py-24 relative overflow-hidden bg-warm-50">
       {/* Warm testimonial ambiance */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#0472ab]/15 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '6s' }} />
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#0472ab]/12 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '8s' }} />
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#041c28]/15 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '6s' }} />
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#041c28]/12 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '8s' }} />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
@@ -107,10 +107,10 @@ export default function TestimonialsSection() {
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
                   whileHover={{ y: -5 }}
-                  className="bg-white/80 backdrop-blur-sm p-8 rounded-3xl border border-gray-200 hover:border-[#0472ab]/50 transition-all h-full shadow-lg hover:shadow-xl"
+                  className="bg-white/80 backdrop-blur-sm p-8 rounded-3xl border border-gray-200 hover:border-[#041c28]/50 transition-all h-full shadow-lg hover:shadow-xl"
                 >
                   {/* Quote Icon */}
-                  <Quote className="text-[#0472ab] mb-4" size={32} />
+                  <Quote className="text-[#041c28] mb-4" size={32} />
 
                   {/* Rating */}
                   <div className="flex items-center gap-1 mb-4">
@@ -129,15 +129,15 @@ export default function TestimonialsSection() {
                   </p>
 
                   {/* Trip Info */}
-                  <div className="mb-6 px-4 py-2 bg-[#0472ab]/10 rounded-full inline-block">
-                    <span className="text-[#0472ab] text-sm font-semibold">
+                  <div className="mb-6 px-4 py-2 bg-[#041c28]/10 rounded-full inline-block">
+                    <span className="text-[#041c28] text-sm font-semibold">
                       {testimonial.trip}
                     </span>
                   </div>
 
                   {/* User Info */}
                   <div className="flex items-center gap-4 pt-6 border-t border-gray-200">
-                    <div className="relative w-14 h-14 rounded-full overflow-hidden ring-2 ring-[#0472ab]/50">
+                    <div className="relative w-14 h-14 rounded-full overflow-hidden ring-2 ring-[#041c28]/50">
                       <Image
                         src={testimonial.avatar}
                         alt={testimonial.name}
@@ -159,7 +159,7 @@ export default function TestimonialsSection() {
 
       <style jsx global>{`
         .testimonials-swiper .swiper-pagination-bullet {
-          background: #0472ab !important;
+          background: #041c28 !important;
           opacity: 0.5;
         }
         

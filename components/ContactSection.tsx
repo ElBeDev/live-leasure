@@ -7,8 +7,8 @@ export default function ContactSection() {
   return (
     <section id="contact" className="py-24 relative overflow-hidden bg-warm-50">
       {/* Contact section with welcoming ambiance */}
-      <div className="absolute top-0 left-1/3 w-96 h-96 bg-[#0472ab]/15 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '7s' }} />
-      <div className="absolute bottom-0 right-1/3 w-80 h-80 bg-[#0472ab]/12 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '8s' }} />
+      <div className="absolute top-0 left-1/3 w-96 h-96 bg-[#041c28]/15 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '7s' }} />
+      <div className="absolute bottom-0 right-1/3 w-80 h-80 bg-[#041c28]/12 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '8s' }} />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
@@ -38,7 +38,7 @@ export default function ContactSection() {
               
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full bg-[#0472ab] flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 rounded-full bg-[#041c28] flex items-center justify-center flex-shrink-0">
                     <MapPin className="text-white" size={20} />
                   </div>
                   <div>
@@ -53,7 +53,7 @@ export default function ContactSection() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full bg-[#0472ab] flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 rounded-full bg-[#041c28] flex items-center justify-center flex-shrink-0">
                     <Phone className="text-white" size={20} />
                   </div>
                   <div>
@@ -65,7 +65,7 @@ export default function ContactSection() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full bg-[#0472ab] flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 rounded-full bg-[#041c28] flex items-center justify-center flex-shrink-0">
                     <Mail className="text-white" size={20} />
                   </div>
                   <div>
@@ -77,7 +77,7 @@ export default function ContactSection() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full bg-[#0472ab] flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 rounded-full bg-[#041c28] flex items-center justify-center flex-shrink-0">
                     <Clock className="text-white" size={20} />
                   </div>
                   <div>
@@ -97,7 +97,7 @@ export default function ContactSection() {
           >
             <div className="bg-white/80 backdrop-blur-sm p-8 rounded-3xl border border-gray-200 h-full flex items-center justify-center shadow-lg">
               <div className="text-center">
-                <Mail className="text-[#0472ab] mx-auto mb-4" size={48} />
+                <Mail className="text-[#041c28] mx-auto mb-4" size={48} />
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Contact Form</h3>
                 <p className="text-gray-700 mb-6">
                   Contact form and Google Maps integration coming soon...
@@ -105,7 +105,7 @@ export default function ContactSection() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="px-8 py-3 bg-[#0472ab] text-white rounded-full font-semibold shadow-lg hover:bg-[#035d8c] transition-colors"
+                  className="px-8 py-3 bg-[#041c28] text-white rounded-full font-semibold shadow-lg hover:bg-[#072d3e] transition-colors"
                 >
                   Email Us Directly
                 </motion.button>

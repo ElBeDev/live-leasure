@@ -12,7 +12,7 @@ export default function HotelsShowcase() {
   return (
     <section className="py-24 relative overflow-hidden bg-cool-50">
       {/* Luxury hotel ambient */}
-      <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#0472ab]/15 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '6s' }} />
+      <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#041c28]/15 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '6s' }} />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
@@ -29,7 +29,7 @@ export default function HotelsShowcase() {
           </p>
           
           <div className="flex items-center justify-center gap-4 text-2xl font-bold">
-            <Hotel className="text-[#0472ab]" size={32} />
+            <Hotel className="text-[#041c28]" size={32} />
             <span className="text-gradient">1M+</span>
             <span className="text-gray-900">Hotels Worldwide</span>
           </div>
@@ -49,7 +49,7 @@ export default function HotelsShowcase() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.05 }}
-              className="bg-white/80 backdrop-blur-sm p-6 rounded-xl flex items-center justify-center hover:border-[#0472ab]/50 border border-gray-200 transition-all shadow-lg hover:shadow-xl"
+              className="bg-white/80 backdrop-blur-sm p-6 rounded-xl flex items-center justify-center hover:border-[#041c28]/50 border border-gray-200 transition-all shadow-lg hover:shadow-xl"
             >
               <span className="text-gray-900 font-semibold text-sm md:text-base">{brand}</span>
             </motion.div>
@@ -64,7 +64,7 @@ export default function HotelsShowcase() {
           className="bg-white/80 backdrop-blur-sm p-8 rounded-3xl max-w-4xl mx-auto border border-gray-200 shadow-lg"
         >
           <div className="flex items-center gap-4 mb-6">
-            <Search className="text-[#0472ab]" size={24} />
+            <Search className="text-[#041c28]" size={24} />
             <h3 className="text-2xl font-bold text-gray-900">Find Your Perfect Stay</h3>
           </div>
           <p className="text-gray-700 text-center">

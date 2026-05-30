@@ -34,8 +34,8 @@ export default function MultiCitySection() {
         backgroundImage: 'linear-gradient(90deg, rgba(4, 114, 171, 0.15) 1px, transparent 1px), linear-gradient(180deg, rgba(4, 114, 171, 0.15) 1px, transparent 1px)',
         backgroundSize: '50px 50px'
       }} />
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#0472ab]/15 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '7s' }} />
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#0472ab]/12 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '9s' }} />
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#041c28]/15 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '7s' }} />
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#041c28]/12 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '9s' }} />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
@@ -55,7 +55,7 @@ export default function MultiCitySection() {
         {/* Timeline Steps */}
         <div className="relative max-w-5xl mx-auto mb-16">
           {/* Connection Line */}
-          <div className="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-[#0472ab] transform -translate-y-1/2 z-0" />
+          <div className="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-[#041c28] transform -translate-y-1/2 z-0" />
           
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative z-10">
             {steps.map((step, index) => (
@@ -67,11 +67,11 @@ export default function MultiCitySection() {
                 transition={{ delay: index * 0.15 }}
                 className="relative"
               >
-                <div className="bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-gray-200 hover:border-[#0472ab]/50 transition-all text-center shadow-lg hover:shadow-xl">
+                <div className="bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-gray-200 hover:border-[#041c28]/50 transition-all text-center shadow-lg hover:shadow-xl">
                   <motion.div
                     whileHover={{ rotate: 360, scale: 1.1 }}
                     transition={{ duration: 0.6 }}
-                    className="w-16 h-16 mx-auto mb-4 rounded-full bg-[#0472ab] flex items-center justify-center shadow-lg"
+                    className="w-16 h-16 mx-auto mb-4 rounded-full bg-[#041c28] flex items-center justify-center shadow-lg"
                   >
                     <step.icon className="text-white" size={28} />
                   </motion.div>
@@ -82,7 +82,7 @@ export default function MultiCitySection() {
                 {/* Arrow between steps - desktop only */}
                 {index < steps.length - 1 && (
                   <div className="hidden md:block absolute top-1/2 -right-4 transform -translate-y-1/2">
-                    <ArrowRight className="text-[#0472ab]" size={24} />
+                    <ArrowRight className="text-[#041c28]" size={24} />
                   </div>
                 )}
               </motion.div>
@@ -121,7 +121,7 @@ export default function MultiCitySection() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="px-10 py-4 bg-[#0472ab] text-white rounded-full font-semibold text-lg shadow-2xl hover:bg-[#035d8c] transition-colors"
+            className="px-10 py-4 bg-[#041c28] text-white rounded-full font-semibold text-lg shadow-2xl hover:bg-[#072d3e] transition-colors"
           >
             Plan Your Multi-City Trip
           </motion.button>
