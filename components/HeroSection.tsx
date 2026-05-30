@@ -41,17 +41,6 @@ export default function HeroSection() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
         <div className="text-center">
-          {/* Badge */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
-            className="inline-flex items-center space-x-2 px-4 py-2 glass-dark rounded-full mb-8 border border-white/20"
-          >
-            <Sparkles className="text-[#041c28]" size={20} />
-            <span className="text-[#eee273] text-sm font-medium">Premium Travel Membership</span>
-          </motion.div>
-
           {/* Main Headline with Typing Effect */}
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
