@@ -69,7 +69,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.4, ease: [0.4, 0, 0.2, 1] }}
-            className="text-xl md:text-2xl text-[#eee273] drop-shadow-lg mb-12 max-w-3xl mx-auto font-medium"
+            className="text-xl md:text-2xl text-white drop-shadow-lg mb-12 max-w-3xl mx-auto font-medium"
           >
             Access exclusive deals on hotels, flights, cruises, and tours worldwide.
             Powered by AI to find you the best prices every time. 
