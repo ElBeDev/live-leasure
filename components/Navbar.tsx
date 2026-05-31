@@ -85,21 +85,12 @@ export default function Navbar() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5 }}
-              className="font-sans text-[#eee273]/70 hover:text-[#eee273] text-sm tracking-[0.08em] uppercase transition-colors duration-300"
-            >
-              Login
-            </motion.a>
-
-            <motion.button
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.6 }}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               className="px-6 py-2.5 bg-[#eee273] text-[#041c28] font-sans font-semibold text-xs tracking-[0.12em] uppercase hover:bg-white transition-colors duration-300"
             >
-              Join Now
-            </motion.button>
+              Login
+            </motion.a>
           </div>
 
           {/* Mobile menu toggle */}
@@ -135,16 +126,13 @@ export default function Navbar() {
                   {link.label}
                 </Link>
               ))}
-              <div className="pt-6 space-y-3 border-t border-[#eee273]/10">
+              <div className="pt-6 border-t border-[#eee273]/10">
                 <a
                   href="https://login.live-leisure.com"
-                  className="block w-full text-center py-3 font-sans text-[#eee273]/70 hover:text-[#eee273] text-sm tracking-[0.1em] uppercase border border-[#eee273]/20 hover:border-[#eee273]/50 transition-all duration-300"
+                  className="block w-full text-center py-3 bg-[#eee273] text-[#041c28] font-sans font-semibold text-xs tracking-[0.12em] uppercase hover:bg-white transition-colors duration-300"
                 >
                   Login
                 </a>
-                <button className="block w-full text-center py-3 bg-[#eee273] text-[#041c28] font-sans font-semibold text-xs tracking-[0.12em] uppercase hover:bg-white transition-colors duration-300">
-                  Join Now
-                </button>
               </div>
             </div>
           </motion.div>
