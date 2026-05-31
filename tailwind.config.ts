@@ -11,6 +11,9 @@ const config: Config = {
       fontFamily: {
         sans: ['var(--font-inter)', 'var(--font-poppins)', 'system-ui', 'sans-serif'],
         poppins: ['var(--font-poppins)', 'sans-serif'],
+        serif: ['var(--font-playfair)', 'var(--font-cormorant)', 'Georgia', 'serif'],
+        playfair: ['var(--font-playfair)', 'Georgia', 'serif'],
+        cormorant: ['var(--font-cormorant)', 'Georgia', 'serif'],
       },
       colors: {
         brand: '#041c28',

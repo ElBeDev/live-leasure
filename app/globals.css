@@ -9,73 +9,76 @@
   
   body {
     @apply antialiased;
+    background-color: #041c28;
   }
 }
 
 @layer utilities {
   .glass {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(238, 226, 115, 0.15);
   }
 
   .glass-dark {
-    background: rgba(10, 14, 39, 0.7);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+    background: rgba(4, 28, 40, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(238, 226, 115, 0.12);
   }
 
+  /* Línea separadora dorada */
+  .gold-divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, #eee273, transparent);
+    opacity: 0.3;
+  }
+
+  /* Texto gradiente dorado */
   .text-gradient {
-    color: #041c28;
+    background: linear-gradient(135deg, #eee273 0%, #d4af37 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Glow dorado en hover */
+  .glow-gold {
+    box-shadow: 0 0 24px rgba(238, 226, 115, 0.2);
+  }
+
+  .glow-gold:hover {
+    box-shadow: 0 0 40px rgba(238, 226, 115, 0.35);
   }
 
   .hover-lift {
     @apply transition-all duration-300 hover:scale-105 hover:shadow-2xl;
   }
-
-  .glow-effect {
-    box-shadow: 0 0 20px rgba(4, 114, 171, 0.5);
-  }
-
-  .glow-effect:hover {
-    box-shadow: 0 0 40px rgba(4, 114, 171, 0.8);
-  }
 }
 
-/* Wave animation for hero */
-@keyframes wave {
-  0% {
-    background-position-x: 0;
-  }
-  100% {
-    background-position-x: 100px;
-  }
-}
-
-/* Custom scrollbar */
+/* Scrollbar elegante */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #1A1D3A;
+  background: #041c28;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #041c28;
-  border-radius: 10px;
+  background: #eee273;
+  opacity: 0.3;
+  border-radius: 0;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #072d3e;
+  background: #d4af37;
 }
 
 /* Selection */
 ::selection {
-  background-color: rgba(4, 114, 171, 0.3);
+  background-color: rgba(238, 226, 115, 0.2);
   color: #eee273;
 }
+
