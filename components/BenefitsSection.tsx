@@ -2,198 +2,100 @@
 
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import {
-  Hotel,
-  Plane,
-  Ship,
-  MapPin,
-  Car,
-  Ticket,
-  Package,
-  Globe,
-  Tag,
-} from 'lucide-react';
+import { Hotel, Plane, Ship, MapPin, Car, Ticket, Package, Globe, Tag } from 'lucide-react';
 
 export default function BenefitsSection() {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
+  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
   const benefits = [
-    {
-      icon: Hotel,
-      title: 'Exclusive Hotel Rates',
-      description: 'Over 1 million hotels worldwide with exclusive rates. Price Match Guarantee + 5% discount.',
-      gradient: 'from-[#041c28] to-[#041c28]',
-    },
-    {
-      icon: Plane,
-      title: 'Discounted Flights',
-      description: 'Connect globally with 200+ airlines, including low-cost carriers.',
-      gradient: 'from-[#041c28] to-[#041c28]',
-    },
-    {
-      icon: Ship,
-      title: 'Member-only Cruises',
-      description: 'Access to 25K+ cruise itineraries to navigate the seven seas.',
-      gradient: 'from-[#041c28] to-[#041c28]',
-    },
-    {
-      icon: MapPin,
-      title: 'Vacation Rentals',
-      description: 'Resort-style accommodations in fully equipped condos worldwide.',
-      gradient: 'from-[#041c28] to-[#041c28]',
-    },
-    {
-      icon: Ticket,
-      title: 'Tours & Activities',
-      description: 'Discover local experiences, theme parks, and entertainment tickets.',
-      gradient: 'from-[#041c28] to-[#041c28]',
-    },
-    {
-      icon: Car,
-      title: 'Wholesale Car Rentals',
-      description: 'Discounted rates at over 10,000 pickup locations worldwide.',
-      gradient: 'from-[#041c28] to-[#041c28]',
-    },
-    {
-      icon: Package,
-      title: 'AI-Powered Travel Packages',
-      description: 'Our AI finds the best prices on custom packages with flights, hotels, and curated experiences tailored just for you.',
-      gradient: 'from-[#041c28] to-[#041c28]',
-    },
-    {
-      icon: Globe,
-      title: 'AI Multi-City Packages',
-      description: 'AI-assisted planning for multi-destination trips with optimized routes, hotels, flights, and activities at the best prices.',
-      gradient: 'from-[#041c28] to-[#041c28]',
-    },
-    {
-      icon: Tag,
-      title: 'My Deals at Home',
-      description: 'Unlock discounts on 700,000+ merchants across North America.',
-      gradient: 'from-[#041c28] to-[#041c28]',
-    },
+    { icon: Hotel, title: 'Exclusive Hotel Rates', description: 'Over 1 million hotels worldwide with exclusive rates. Price Match Guarantee + 5% discount.' },
+    { icon: Plane, title: 'Discounted Flights', description: 'Connect globally with 200+ airlines, including low-cost carriers.' },
+    { icon: Ship, title: 'Member-only Cruises', description: 'Access to 25K+ cruise itineraries to navigate the seven seas.' },
+    { icon: MapPin, title: 'Vacation Rentals', description: 'Resort-style accommodations in fully equipped condos worldwide.' },
+    { icon: Ticket, title: 'Tours & Activities', description: 'Discover local experiences, theme parks, and entertainment tickets.' },
+    { icon: Car, title: 'Wholesale Car Rentals', description: 'Discounted rates at over 10,000 pickup locations worldwide.' },
+    { icon: Package, title: 'Travel Packages', description: 'Custom packages with flights, hotels, and curated experiences at the best prices.' },
+    { icon: Globe, title: 'Multi-City Packages', description: 'Optimized multi-destination trips with hotels, flights, and activities.' },
+    { icon: Tag, title: 'Deals at Home', description: 'Unlock discounts on 700,000+ merchants across North America.' },
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
-  const cardVariants = {
-    hidden: { opacity: 0, y: 50, scale: 0.9 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      transition: {
-        duration: 0.5,
-        ease: "easeOut" as const,
-      },
-    },
-  };
-
   return (
-    <section id="benefits" className="py-24 relative overflow-hidden bg-warm-50">
-      {/* Tropical pattern */}
-      <div className="absolute inset-0 opacity-[0.03]" style={{
-        backgroundImage: 'url("data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23FF8C42" fill-opacity="1"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")',
-        backgroundSize: '60px 60px'
-      }} />
-      {/* Ambient Glows */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#041c28]/15 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '5s' }} />
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#041c28]/10 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '6s' }} />
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#041c28]/8 rounded-full blur-3xl" />
+    <section id="benefits" className="py-32 relative bg-[#041c28]">
+      {/* Línea superior */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#eee273]/20 to-transparent" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Section Header */}
+      <div className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-16 relative z-10">
+
+        {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          transition={{ duration: 0.9 }}
+          className="text-center mb-20"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-            Member <span className="text-gradient">Benefits</span>
+          <div className="flex items-center justify-center gap-4 mb-8">
+            <div className="h-px w-12 bg-[#eee273]/40" />
+            <span className="font-sans text-[#eee273]/60 text-xs tracking-[0.35em] uppercase">Membership Access</span>
+            <div className="h-px w-12 bg-[#eee273]/40" />
+          </div>
+          <h2 className="font-playfair font-bold text-[#eee273] mb-6" style={{ fontSize: 'clamp(2.2rem, 5vw, 4rem)' }}>
+            Member Benefits
           </h2>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+          <p className="font-sans text-white/50 text-lg max-w-2xl mx-auto leading-relaxed">
             Unlock exclusive access to incredible vacation deals and one-of-a-kind experiences—all designed to make every journey unforgettable.
           </p>
         </motion.div>
 
-        {/* Benefits Grid */}
+        {/* Grid */}
         <motion.div
           ref={ref}
-          variants={containerVariants}
           initial="hidden"
           animate={inView ? 'visible' : 'hidden'}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          variants={{ visible: { transition: { staggerChildren: 0.08 } } }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-[#eee273]/10"
         >
-          {benefits.map((benefit, index) => (
+          {benefits.map((benefit) => (
             <motion.div
               key={benefit.title}
-              variants={cardVariants}
-              whileHover={{
-                y: -10,
-                scale: 1.03,
-                transition: { duration: 0.3 },
-              }}
-              className="group relative"
+              variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5 } } }}
+              className="group bg-[#041c28] p-8 hover:bg-[#072d3e]/40 transition-colors duration-400"
             >
-              {/* Card */}
-              <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl h-full border border-gray-200 hover:border-[#041c28]/50 transition-all duration-300 relative overflow-hidden shadow-lg hover:shadow-xl">
-                {/* Gradient Background on Hover */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${benefit.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-2xl`} />
-
-                {/* Icon */}
-                <motion.div
-                  whileHover={{ rotate: 360, scale: 1.1 }}
-                  transition={{ duration: 0.6 }}
-                  className={`w-16 h-16 rounded-xl bg-gradient-to-br ${benefit.gradient} flex items-center justify-center mb-6 shadow-lg relative z-10`}
-                >
-                  <benefit.icon className="text-[#eee273]" size={32} />
-                </motion.div>
-
-                {/* Content */}
-                <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-[#041c28] transition-colors relative z-10">
-                  {benefit.title}
-                </h3>
-                <p className="text-gray-700 leading-relaxed relative z-10">
-                  {benefit.description}
-                </p>
-
-                {/* Glow Effect */}
-                <div className={`absolute -inset-1 bg-gradient-to-r ${benefit.gradient} rounded-2xl blur opacity-0 group-hover:opacity-20 transition duration-300 -z-10`} />
+              <div className="mb-5 text-[#eee273]/50 group-hover:text-[#eee273] transition-colors duration-300">
+                <benefit.icon size={28} strokeWidth={1.5} />
               </div>
+              <h3 className="font-playfair font-semibold text-[#eee273] text-xl mb-3">
+                {benefit.title}
+              </h3>
+              <p className="font-sans text-white/40 text-sm leading-relaxed group-hover:text-white/60 transition-colors duration-300">
+                {benefit.description}
+              </p>
+              {/* Línea dorada en hover */}
+              <div className="mt-6 h-px w-0 bg-[#eee273]/40 group-hover:w-full transition-all duration-500" />
             </motion.div>
           ))}
         </motion.div>
 
         {/* CTA */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.5 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
           className="text-center mt-16"
         >
           <motion.button
-            whileHover={{ scale: 1.05, boxShadow: '0 0 40px rgba(0, 201, 167, 0.6)' }}
-            whileTap={{ scale: 0.95 }}
-            className="px-10 py-4 bg-[#041c28] text-[#eee273] rounded-full font-semibold text-lg shadow-2xl hover:bg-[#072d3e] transition-colors"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+            className="px-10 py-4 bg-[#eee273] text-[#041c28] font-sans font-semibold text-sm tracking-[0.12em] uppercase hover:bg-white transition-colors duration-300"
           >
             Unlock All Benefits
           </motion.button>
         </motion.div>
       </div>
+
+      {/* Línea inferior */}
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#eee273]/20 to-transparent" />
     </section>
   );
 }

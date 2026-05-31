@@ -4,116 +4,103 @@ import { motion } from 'framer-motion';
 import { MapPin, Mail, Phone, Clock } from 'lucide-react';
 
 export default function ContactSection() {
+  const info = [
+    {
+      icon: MapPin,
+      label: 'Address',
+      value: 'Villas Vta Loc C 46 Int A\nVillas Vta, Las Glorias C.P. 48333\nPuerto Vallarta, Jal.',
+    },
+    { icon: Phone, label: 'Phone', value: '322 225 2985' },
+    { icon: Mail, label: 'Email', value: 'reservations@live-leasure.com' },
+    { icon: Clock, label: 'Support', value: '24/7 Emergency Assistance' },
+  ];
+
   return (
-    <section id="contact" className="py-24 relative overflow-hidden bg-warm-50">
-      {/* Contact section with welcoming ambiance */}
-      <div className="absolute top-0 left-1/3 w-96 h-96 bg-[#041c28]/15 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '7s' }} />
-      <div className="absolute bottom-0 right-1/3 w-80 h-80 bg-[#041c28]/12 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '8s' }} />
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section id="contact" className="py-32 relative bg-[#041c28]">
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#eee273]/20 to-transparent" />
+
+      <div className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-16">
+
+        {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          transition={{ duration: 0.9 }}
+          className="text-center mb-20"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-            Get In <span className="text-gradient">Touch</span>
+          <div className="flex items-center justify-center gap-4 mb-8">
+            <div className="h-px w-12 bg-[#eee273]/40" />
+            <span className="font-sans text-[#eee273]/60 text-xs tracking-[0.35em] uppercase">Get In Touch</span>
+            <div className="h-px w-12 bg-[#eee273]/40" />
+          </div>
+          <h2 className="font-playfair font-bold text-[#eee273] mb-6" style={{ fontSize: 'clamp(2.2rem, 5vw, 4rem)' }}>
+            Contact Us
           </h2>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-            Have questions? Our team is here to help you plan your next adventure.
+          <p className="font-sans text-white/50 text-lg max-w-xl mx-auto leading-relaxed">
+            Our team is here to help you plan your next unforgettable journey.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Contact Info */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-px bg-[#eee273]/10">
+
+          {/* Info */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
+            initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="space-y-8"
+            transition={{ duration: 0.7 }}
+            className="bg-[#041c28] p-12 space-y-10"
           >
-            <div className="bg-white/80 backdrop-blur-sm p-8 rounded-3xl border border-gray-200 shadow-lg">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Contact Information</h3>
-              
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full bg-[#041c28] flex items-center justify-center flex-shrink-0">
-                    <MapPin className="text-[#eee273]" size={20} />
-                  </div>
-                  <div>
-                    <h4 className="text-gray-900 font-semibold mb-1">Address</h4>
-                    <p className="text-gray-700">
-                      Villas Vta Loc C 46 Int A<br />
-                      Villas Vta<br />
-                      Las Glorias C.P. 48333<br />
-                      Puerto Vallarta, Jal.
-                    </p>
-                  </div>
+            {info.map(({ icon: Icon, label, value }) => (
+              <div key={label} className="flex items-start gap-5">
+                <div className="text-[#eee273]/40 mt-0.5 flex-shrink-0">
+                  <Icon size={20} strokeWidth={1.5} />
                 </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full bg-[#041c28] flex items-center justify-center flex-shrink-0">
-                    <Phone className="text-[#eee273]" size={20} />
-                  </div>
-                  <div>
-                    <h4 className="text-gray-900 font-semibold mb-1">Phone</h4>
-                    <p className="text-gray-700">
-                      322 225 2985
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full bg-[#041c28] flex items-center justify-center flex-shrink-0">
-                    <Mail className="text-[#eee273]" size={20} />
-                  </div>
-                  <div>
-                    <h4 className="text-gray-900 font-semibold mb-1">Email</h4>
-                    <p className="text-gray-700">
-                      reservations@live-leasure.com
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full bg-[#041c28] flex items-center justify-center flex-shrink-0">
-                    <Clock className="text-[#eee273]" size={20} />
-                  </div>
-                  <div>
-                    <h4 className="text-gray-900 font-semibold mb-1">24/7 Support</h4>
-                    <p className="text-gray-700">Emergency assistance available anytime</p>
-                  </div>
+                <div>
+                  <div className="font-sans text-[#eee273]/40 text-xs tracking-[0.2em] uppercase mb-1">{label}</div>
+                  <div className="font-sans text-white/70 text-sm leading-relaxed whitespace-pre-line">{value}</div>
                 </div>
               </div>
-            </div>
+            ))}
           </motion.div>
 
-          {/* Contact Form Placeholder */}
+          {/* CTA Panel */}
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
+            initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="bg-[#041c28] p-12 flex flex-col justify-center"
           >
-            <div className="bg-white/80 backdrop-blur-sm p-8 rounded-3xl border border-gray-200 h-full flex items-center justify-center shadow-lg">
-              <div className="text-center">
-                <Mail className="text-[#041c28] mx-auto mb-4" size={48} />
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Contact Form</h3>
-                <p className="text-gray-700 mb-6">
-                  Contact form and Google Maps integration coming soon...
-                </p>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="px-8 py-3 bg-[#041c28] text-[#eee273] rounded-full font-semibold shadow-lg hover:bg-[#072d3e] transition-colors"
-                >
-                  Email Us Directly
-                </motion.button>
-              </div>
+            <h3 className="font-playfair font-semibold text-[#eee273] text-2xl mb-4">
+              Start Your Journey
+            </h3>
+            <p className="font-sans text-white/40 text-sm leading-relaxed mb-10">
+              Become a member today and unlock exclusive access to the world's finest travel experiences at member-only prices.
+            </p>
+
+            <div className="space-y-4">
+              <motion.button
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="w-full py-4 bg-[#eee273] text-[#041c28] font-sans font-semibold text-xs tracking-[0.12em] uppercase hover:bg-white transition-colors duration-300"
+              >
+                Become a Member
+              </motion.button>
+              <motion.a
+                href="mailto:reservations@live-leasure.com"
+                whileHover={{ scale: 1.02 }}
+                className="block w-full py-4 border border-[#eee273]/30 text-[#eee273] font-sans font-semibold text-xs tracking-[0.12em] uppercase text-center hover:border-[#eee273] hover:bg-[#eee273]/5 transition-all duration-300"
+              >
+                Send Us an Email
+              </motion.a>
             </div>
           </motion.div>
         </div>
       </div>
+
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#eee273]/20 to-transparent" />
     </section>
   );
 }

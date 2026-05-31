@@ -5,18 +5,14 @@ import { useInView } from 'react-intersection-observer';
 import { Clock, Calendar, Crown, Check } from 'lucide-react';
 
 export default function ResortWeeksSection() {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
+  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
   const resortWeeks = [
     {
       icon: Clock,
       type: 'Last Minute',
-      price: 399,
+      price: '$399',
       tagline: 'Spontaneity Made Affordable',
-      gradient: 'from-[#041c28] to-[#041c28]',
       features: [
         'Fixed price for every week',
         'Book within 30 days of check-in',
@@ -24,14 +20,13 @@ export default function ResortWeeksSection() {
         'Any destination or unit size',
         'Unbeatable last-minute value',
       ],
-      popular: false,
+      featured: false,
     },
     {
       icon: Calendar,
       type: 'Smart Weeks',
-      price: 499,
+      price: '$499',
       tagline: 'Plan Ahead & Save',
-      gradient: 'from-[#041c28] to-[#041c28]',
       features: [
         'One price for all weeks',
         'Book up to 6 months in advance',
@@ -39,15 +34,13 @@ export default function ResortWeeksSection() {
         'High-end condos (studio to multi-bedroom)',
         'Exceptional quality guaranteed',
       ],
-      popular: true,
+      featured: true,
     },
     {
       icon: Crown,
       type: 'VIP Weeks',
-      price: 499,
-      priceRange: '499 - 2999',
+      price: '$499 – $2,999',
       tagline: 'Premium Luxury Experience',
-      gradient: 'from-[#041c28] to-[#041c28]',
       features: [
         'Flexible pricing for premium stays',
         'Over 100,000 resort options',
@@ -55,157 +48,116 @@ export default function ResortWeeksSection() {
         'Spacious family accommodations',
         'Top-tier amenities included',
       ],
-      popular: false,
+      featured: false,
     },
   ];
 
   return (
-    <section id="pricing" className="py-24 relative overflow-hidden bg-white">
-      {/* Tropical ambient lighting */}
-      <div className="absolute top-0 left-1/3 w-96 h-96 bg-[#041c28]/15 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '7s' }} />
-      <div className="absolute bottom-0 right-1/3 w-96 h-96 bg-[#041c28]/12 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '8s' }} />
-      <div className="absolute top-1/2 right-1/4 w-64 h-64 bg-[#041c28]/10 rounded-full blur-2xl" />
+    <section id="pricing" className="py-32 relative bg-[#041c28]">
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#eee273]/20 to-transparent" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Section Header */}
+      <div className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-16">
+
+        {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          transition={{ duration: 0.9 }}
+          className="text-center mb-20"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-            <span className="text-gradient">Resort Weeks</span> Pricing
+          <div className="flex items-center justify-center gap-4 mb-8">
+            <div className="h-px w-12 bg-[#eee273]/40" />
+            <span className="font-sans text-[#eee273]/60 text-xs tracking-[0.35em] uppercase">Seven-Night Stays</span>
+            <div className="h-px w-12 bg-[#eee273]/40" />
+          </div>
+          <h2 className="font-playfair font-bold text-[#eee273] mb-6" style={{ fontSize: 'clamp(2.2rem, 5vw, 4rem)' }}>
+            Resort Weeks
           </h2>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+          <p className="font-sans text-white/50 text-lg max-w-2xl mx-auto leading-relaxed">
             Seven-night stays in fully equipped, resort-style accommodations. Perfect for families, couples, or solo adventurers.
           </p>
         </motion.div>
 
-        {/* Pricing Cards */}
-        <motion.div
-          ref={ref}
-          initial={{ opacity: 0 }}
-          animate={inView ? { opacity: 1 } : { opacity: 0 }}
-          transition={{ duration: 0.8 }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-8"
-        >
+        {/* Cards */}
+        <div ref={ref} className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {resortWeeks.map((resort, index) => (
             <motion.div
               key={resort.type}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.15 }}
-              whileHover={{ y: -10, scale: 1.02 }}
-              className={`relative p-8 rounded-3xl border-2 ${
-                resort.popular 
-                  ? 'bg-[#041c28] text-[#eee273] border-[#041c28] shadow-2xl' 
-                  : 'bg-white/80 backdrop-blur-sm text-gray-900 border-gray-200 hover:border-[#041c28]/50 shadow-lg'
-              } transition-all duration-300`}
+              initial={{ opacity: 0, y: 30 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: index * 0.12 }}
+              className={`relative flex flex-col p-8 border transition-all duration-300 group ${
+                resort.featured
+                  ? 'border-[#eee273]/60 bg-[#eee273]/5'
+                  : 'border-[#eee273]/15 bg-transparent hover:border-[#eee273]/40 hover:bg-[#eee273]/5'
+              }`}
             >
-              {/* Popular Badge */}
-              {resort.popular && (
-                <motion.div
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  transition={{ delay: 0.5, type: 'spring' }}
-                  className="absolute -top-4 left-1/2 transform -translate-x-1/2 px-6 py-2 bg-[#041c28] rounded-full text-[#eee273] font-semibold text-sm shadow-lg"
-                >
-                  Most Popular
-                </motion.div>
+              {/* Badge */}
+              {resort.featured && (
+                <div className="absolute -top-px left-1/2 -translate-x-1/2">
+                  <span className="block bg-[#eee273] text-[#041c28] font-sans font-semibold text-[10px] tracking-[0.15em] uppercase px-4 py-1">
+                    Most Popular
+                  </span>
+                </div>
               )}
 
               {/* Icon */}
-              <motion.div
-                whileHover={{ rotate: 360, scale: 1.1 }}
-                transition={{ duration: 0.6 }}
-                className={`w-20 h-20 mx-auto mb-6 rounded-2xl ${
-                  resort.popular
-                    ? 'bg-white/20'
-                    : 'bg-gradient-to-br ' + resort.gradient
-                } flex items-center justify-center shadow-lg`}
-              >
-                <resort.icon className="text-[#eee273]" size={40} />
-              </motion.div>
+              <div className="mb-6 text-[#eee273]/50 group-hover:text-[#eee273] transition-colors duration-300">
+                <resort.icon size={28} strokeWidth={1.5} />
+              </div>
 
-              {/* Type */}
-              <h3 className={`text-3xl font-bold text-center mb-2 ${
-                resort.popular ? 'text-[#eee273]' : 'text-gray-900'
-              }`}>
-                {resort.type}
-              </h3>
-
-              {/* Tagline */}
-              <p className={`text-center mb-6 ${
-                resort.popular ? 'text-[#eee273]/90' : 'text-gray-600'
-              }`}>
-                {resort.tagline}
-              </p>
+              {/* Type + tagline */}
+              <h3 className="font-playfair font-bold text-[#eee273] text-2xl mb-2">{resort.type}</h3>
+              <p className="font-sans text-white/40 text-sm mb-8">{resort.tagline}</p>
 
               {/* Price */}
-              <div className="text-center mb-8">
-                <div className="flex items-baseline justify-center gap-2">
-                  <span className={`text-2xl ${resort.popular ? 'text-[#eee273]/80' : 'text-gray-600'}`}>$</span>
-                  <span className={`text-6xl font-bold ${
-                    resort.popular ? 'text-[#eee273]' : 'text-[#041c28]'
-                  }`}>
-                    {resort.priceRange || resort.price}
-                  </span>
-                  <span className={`text-2xl ${resort.popular ? 'text-[#eee273]/80' : 'text-gray-600'}`}>USD</span>
+              <div className="mb-8 pb-8 border-b border-[#eee273]/10">
+                <div className="font-playfair font-bold text-[#eee273]" style={{ fontSize: 'clamp(1.8rem, 3vw, 2.5rem)' }}>
+                  {resort.price}
                 </div>
-                <p className={`mt-2 ${resort.popular ? 'text-[#eee273]/70' : 'text-gray-500'}`}>per 7-night stay</p>
+                <div className="font-sans text-white/30 text-xs tracking-[0.15em] uppercase mt-1">per 7-night stay · USD</div>
               </div>
 
               {/* Features */}
-              <ul className="space-y-4 mb-8">
-                {resort.features.map((feature, idx) => (
-                  <motion.li
-                    key={idx}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.4, delay: index * 0.15 + idx * 0.1 }}
-                    className="flex items-start space-x-3"
-                  >
-                    <Check className={`flex-shrink-0 mt-1 ${
-                      resort.popular ? 'text-[#eee273]' : 'text-[#041c28]'
-                    }`} size={20} />
-                    <span className={resort.popular ? 'text-[#eee273]/90' : 'text-gray-700'}>{feature}</span>
-                  </motion.li>
+              <ul className="space-y-3 flex-grow mb-8">
+                {resort.features.map((feature) => (
+                  <li key={feature} className="flex items-start gap-3">
+                    <Check size={14} className="text-[#eee273]/50 mt-0.5 flex-shrink-0" strokeWidth={2} />
+                    <span className="font-sans text-white/50 text-sm leading-relaxed group-hover:text-white/70 transition-colors duration-300">{feature}</span>
+                  </li>
                 ))}
               </ul>
 
-              {/* CTA Button */}
+              {/* CTA */}
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className={`w-full py-4 rounded-full font-semibold text-lg transition-all duration-300 ${
-                  resort.popular
-                    ? 'bg-white text-[#041c28] shadow-lg hover:shadow-xl'
-                    : 'bg-[#041c28] text-[#eee273] shadow-lg hover:shadow-xl hover:bg-[#072d3e]'
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className={`w-full py-3.5 font-sans font-semibold text-xs tracking-[0.12em] uppercase transition-colors duration-300 ${
+                  resort.featured
+                    ? 'bg-[#eee273] text-[#041c28] hover:bg-white'
+                    : 'border border-[#eee273]/30 text-[#eee273]/70 hover:border-[#eee273] hover:text-[#eee273]'
                 }`}
               >
                 Book Now
               </motion.button>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
 
-        {/* Additional Info */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+        {/* Nota al pie */}
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          className="mt-16 text-center"
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="text-center font-sans text-white/30 text-sm mt-10"
         >
-          <p className="text-gray-400 text-lg">
-            All resort weeks include fully equipped accommodations with comfort and convenience for your perfect vacation.
-          </p>
-        </motion.div>
+          All resort weeks include fully equipped accommodations with resort-quality amenities.
+        </motion.p>
       </div>
+
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#eee273]/20 to-transparent" />
     </section>
   );
 }

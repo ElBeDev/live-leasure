@@ -2,180 +2,112 @@
 
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Users, Globe, DollarSign, Award, TrendingUp, Shield } from 'lucide-react';
+import { Award, TrendingUp, Shield } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
-export default function WhyJoinSection() {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
-
-  const stats = [
-    {
-      icon: Users,
-      end: 50000,
-      suffix: '+',
-      label: 'Members Worldwide',
-      description: 'Join an exclusive community',
-    },
-    {
-      icon: Globe,
-      end: 133028,
-      suffix: '+',
-      label: 'Travel Destinations',
-      description: 'Explore the world',
-    },
-    {
-      icon: DollarSign,
-      end: null,
-      suffix: '',
-      label: 'High Savings',
-      description: 'On your vacations',
-      displayText: 'High',
-    },
-  ];
-
-  const features = [
-    {
-      icon: Award,
-      title: 'AI-Powered Best Prices',
-      description: 'Our AI constantly searches and compares millions of options to guarantee you the best rates available.',
-    },
-    {
-      icon: TrendingUp,
-      title: 'Lifetime Membership',
-      description: 'One-time payment for lifetime access to exclusive travel deals worldwide.',
-    },
-    {
-      icon: Shield,
-      title: '24/7 Support',
-      description: 'Our dedicated team is always ready to help with emergencies and questions.',
-    },
-  ];
-
-  return (
-    <section id="why-join" className="py-24 relative overflow-hidden bg-gradient-to-br from-cool-50 via-warm-50 to-cool-100">
-      {/* Tropical background */}
-      <div className="absolute inset-0 opacity-10" style={{
-        backgroundImage: 'radial-gradient(circle at 20% 50%, rgba(4, 114, 171, 0.2) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(4, 114, 171, 0.2) 0%, transparent 50%)'
-      }} />
-      <div className="absolute top-1/4 right-0 w-96 h-96 bg-[#041c28]/15 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '6s' }} />
-      <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-[#041c28]/15 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '7s' }} />
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-            Why Join <span className="text-gradient">Live-Leisure</span>?
-          </h2>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-            We offer our members exclusive access to incredible vacation deals and one-of-a-kind experiences—all designed to make every journey unforgettable.
-          </p>
-        </motion.div>
-
-        {/* Animated Stats */}
-        <div ref={ref} className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
-          {stats.map((stat, index) => (
-            <StatCard key={stat.label} stat={stat} index={index} inView={inView} />
-          ))}
-        </div>
-
-        {/* Features Grid */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-8"
-        >
-          {features.map((feature, index) => (
-            <motion.div
-              key={feature.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl border border-gray-200 hover:border-[#041c28]/50 transition-all duration-300 group shadow-lg hover:shadow-xl"
-            >
-              <motion.div
-                whileHover={{ scale: 1.1, rotate: 5 }}
-                transition={{ duration: 0.3 }}
-                className="w-16 h-16 rounded-xl bg-[#041c28] flex items-center justify-center mb-6"
-              >
-                <feature.icon className="text-[#eee273]" size={32} />
-              </motion.div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-[#041c28] transition-colors">
-                {feature.title}
-              </h3>
-              <p className="text-gray-700 leading-relaxed">
-                {feature.description}
-              </p>
-            </motion.div>
-          ))}
-        </motion.div>
-      </div>
-    </section>
-  );
-}
-
-function StatCard({ stat, index, inView }: any) {
+function CountUp({ end, suffix, inView }: { end: number; suffix: string; inView: boolean }) {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    if (!inView || stat.end === null) return;
-
+    if (!inView) return;
     let startTime: number;
     const duration = 2000;
-    const startValue = 0;
-    const endValue = stat.end;
-
     const animate = (currentTime: number) => {
       if (!startTime) startTime = currentTime;
       const progress = Math.min((currentTime - startTime) / duration, 1);
       const easeOut = 1 - Math.pow(1 - progress, 3);
-      setCount(Math.floor(easeOut * endValue));
-
-      if (progress < 1) {
-        requestAnimationFrame(animate);
-      }
+      setCount(Math.floor(easeOut * end));
+      if (progress < 1) requestAnimationFrame(animate);
     };
-
     requestAnimationFrame(animate);
-  }, [inView, stat.end]);
+  }, [inView, end]);
+
+  return <>{count.toLocaleString()}{suffix}</>;
+}
+
+export default function WhyJoinSection() {
+  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.2 });
+
+  const stats = [
+    { end: 500000, suffix: '+', label: 'Members Worldwide' },
+    { end: 133000, suffix: '+', label: 'Travel Destinations' },
+    { end: 70, suffix: '+', label: 'Countries Available' },
+  ];
+
+  const features = [
+    { icon: Award, title: 'Best Prices', description: 'Our technology constantly searches and compares millions of options to guarantee you the best rates available.' },
+    { icon: TrendingUp, title: 'Lifetime Membership', description: 'One-time payment for lifetime access to exclusive travel deals and experiences worldwide.' },
+    { icon: Shield, title: '24/7 Support', description: 'Our dedicated team is always ready to help with travel emergencies and any questions.' },
+  ];
 
   return (
-    <motion.div
-      initial={{ opacity: 0, scale: 0.8 }}
-      whileInView={{ opacity: 1, scale: 1 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.6, delay: index * 0.2 }}
-      className="glass-dark p-8 rounded-2xl border border-white/10 hover:border-[#041c28]/50 transition-all duration-300 text-center group hover:scale-105"
-    >
-      <motion.div
-        initial={{ scale: 0 }}
-        whileInView={{ scale: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5, delay: index * 0.2 + 0.3, type: 'spring' }}
-        className="w-20 h-20 mx-auto mb-6 rounded-full bg-[#041c28] flex items-center justify-center"
-      >
-        <stat.icon className="text-[#eee273]" size={36} />
-      </motion.div>
-      <div className="text-5xl md:text-6xl font-bold text-[#eee273] mb-2">
-        {stat.displayText ? stat.displayText : `${count.toLocaleString()}${stat.suffix}`}
+    <section id="why-join" className="py-32 relative bg-[#061e2c]">
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#eee273]/20 to-transparent" />
+
+      <div className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-16">
+
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.9 }}
+          className="text-center mb-20"
+        >
+          <div className="flex items-center justify-center gap-4 mb-8">
+            <div className="h-px w-12 bg-[#eee273]/40" />
+            <span className="font-sans text-[#eee273]/60 text-xs tracking-[0.35em] uppercase">Why Us</span>
+            <div className="h-px w-12 bg-[#eee273]/40" />
+          </div>
+          <h2 className="font-playfair font-bold text-[#eee273] mb-6" style={{ fontSize: 'clamp(2.2rem, 5vw, 4rem)' }}>
+            Why Join Live-Leisure
+          </h2>
+          <p className="font-sans text-white/50 text-lg max-w-2xl mx-auto leading-relaxed">
+            We offer our members exclusive access to incredible vacation deals and one-of-a-kind experiences—all designed to make every journey unforgettable.
+          </p>
+        </motion.div>
+
+        {/* Stats — números grandes, minimalistas */}
+        <div ref={ref} className="grid grid-cols-1 md:grid-cols-3 gap-px bg-[#eee273]/10 mb-20">
+          {stats.map((stat, index) => (
+            <motion.div
+              key={stat.label}
+              initial={{ opacity: 0, y: 20 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.7, delay: index * 0.15 }}
+              className="bg-[#061e2c] p-12 text-center"
+            >
+              <div className="font-playfair font-bold text-[#eee273] mb-2" style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)' }}>
+                {inView ? <CountUp end={stat.end} suffix={stat.suffix} inView={inView} /> : `0${stat.suffix}`}
+              </div>
+              <div className="font-sans text-white/40 text-xs tracking-[0.2em] uppercase">{stat.label}</div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Features — columnas simples */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-[#eee273]/10">
+          {features.map((feature, index) => (
+            <motion.div
+              key={feature.title}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: index * 0.12 }}
+              className="group bg-[#061e2c] p-10 hover:bg-[#072d3e]/40 transition-colors duration-300"
+            >
+              <div className="mb-5 text-[#eee273]/50 group-hover:text-[#eee273] transition-colors duration-300">
+                <feature.icon size={28} strokeWidth={1.5} />
+              </div>
+              <h3 className="font-playfair font-semibold text-[#eee273] text-xl mb-3">{feature.title}</h3>
+              <p className="font-sans text-white/40 text-sm leading-relaxed group-hover:text-white/60 transition-colors duration-300">{feature.description}</p>
+              <div className="mt-6 h-px w-0 bg-[#eee273]/40 group-hover:w-full transition-all duration-500" />
+            </motion.div>
+          ))}
+        </div>
       </div>
-      <div className="text-xl font-semibold text-[#041c28] mb-2">
-        {stat.label}
-      </div>
-      <p className="text-gray-400">
-        {stat.description}
-      </p>
-    </motion.div>
+
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#eee273]/20 to-transparent" />
+    </section>
   );
 }
