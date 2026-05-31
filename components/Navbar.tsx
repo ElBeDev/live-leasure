@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Menu, X, User, LogIn } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Navbar() {
@@ -30,80 +30,86 @@ export default function Navbar() {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      transition={{ duration: 0.6 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'glass-dark shadow-2xl' 
+      transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        isScrolled
+          ? 'bg-[#041c28]/95 backdrop-blur-md border-b border-[#eee273]/10 shadow-2xl'
           : 'bg-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Línea dorada superior — solo cuando no scrolleado */}
+      {!isScrolled && (
+        <div className="h-px w-full bg-gradient-to-r from-transparent via-[#eee273]/20 to-transparent" />
+      )}
+
+      <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
         <div className="flex items-center justify-between h-20">
+
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2 group">
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              className="relative w-48 h-16"
-            >
+          <Link href="/" className="flex items-center">
+            <div className="relative w-44 h-14">
               <Image
-                src={isScrolled ? "/images/LogoLB.png" : "/images/LogoL.png"}
+                src={isScrolled ? '/images/LogoLB.png' : '/images/LogoL.png'}
                 alt="Live-Leisure"
                 fill
                 className="object-contain transition-opacity duration-300"
                 priority
               />
-            </motion.div>
+            </div>
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          {/* Desktop nav links */}
+          <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link, index) => (
               <motion.div
                 key={link.href}
-                initial={{ opacity: 0, y: -20 }}
+                initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
+                transition={{ delay: 0.1 + index * 0.07 }}
               >
                 <Link
                   href={link.href}
-                  className="text-[#eee273] hover:text-[#041c28] transition-colors duration-300 font-medium relative group"
+                  className="relative font-sans text-[#eee273]/70 hover:text-[#eee273] text-sm tracking-[0.08em] uppercase transition-colors duration-300 group"
                 >
                   {link.label}
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#041c28] group-hover:w-full transition-all duration-300" />
+                  <span className="absolute -bottom-1 left-0 w-0 h-px bg-[#eee273]/60 group-hover:w-full transition-all duration-300" />
                 </Link>
               </motion.div>
             ))}
           </div>
 
-          {/* CTA Buttons */}
-          <div className="hidden md:flex items-center space-x-4">
+          {/* CTA buttons — estilo luxury */}
+          <div className="hidden md:flex items-center gap-5">
             <motion.a
               href="https://login.live-leisure.com"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="flex items-center space-x-2 px-4 py-2 text-[#eee273] hover:text-[#041c28] transition-colors"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.5 }}
+              className="font-sans text-[#eee273]/70 hover:text-[#eee273] text-sm tracking-[0.08em] uppercase transition-colors duration-300"
             >
-              <LogIn size={20} />
-              <span>Login</span>
+              Login
             </motion.a>
-            
+
             <motion.button
-              whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(0, 201, 167, 0.5)' }}
-              whileTap={{ scale: 0.95 }}
-              className="flex items-center space-x-2 px-6 py-3 bg-[#041c28] text-[#eee273] rounded-full font-semibold shadow-lg hover:bg-[#072d3e] transition-colors"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.6 }}
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="px-6 py-2.5 bg-[#eee273] text-[#041c28] font-sans font-semibold text-xs tracking-[0.12em] uppercase hover:bg-white transition-colors duration-300"
             >
-              <User size={20} />
-              <span>Join Now</span>
+              Join Now
             </motion.button>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile menu toggle */}
           <motion.button
             whileTap={{ scale: 0.9 }}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="md:hidden text-[#eee273] p-2"
+            aria-label="Toggle menu"
           >
-            {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </motion.button>
         </div>
       </div>
@@ -115,30 +121,29 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden glass-dark"
+            transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
+            className="md:hidden bg-[#041c28]/98 backdrop-blur-md border-t border-[#eee273]/10"
           >
-            <div className="px-4 py-6 space-y-4">
+            <div className="px-6 py-8 space-y-6">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="block text-[#eee273] hover:text-[#041c28] transition-colors py-2"
+                  className="block font-sans text-[#eee273]/70 hover:text-[#eee273] text-sm tracking-[0.1em] uppercase transition-colors py-1"
                 >
                   {link.label}
                 </Link>
               ))}
-              <div className="pt-4 space-y-3 border-t border-white/20">
+              <div className="pt-6 space-y-3 border-t border-[#eee273]/10">
                 <a
                   href="https://login.live-leisure.com"
-                  className="w-full flex items-center justify-center space-x-2 px-4 py-3 text-[#eee273] border border-white/30 rounded-full hover:bg-white/10 transition-colors"
+                  className="block w-full text-center py-3 font-sans text-[#eee273]/70 hover:text-[#eee273] text-sm tracking-[0.1em] uppercase border border-[#eee273]/20 hover:border-[#eee273]/50 transition-all duration-300"
                 >
-                  <LogIn size={20} />
-                  <span>Login</span>
+                  Login
                 </a>
-                <button className="w-full flex items-center justify-center space-x-2 px-4 py-3 bg-[#041c28] text-[#eee273] rounded-full font-semibold">
-                  <User size={20} />
-                  <span>Join Now</span>
+                <button className="block w-full text-center py-3 bg-[#eee273] text-[#041c28] font-sans font-semibold text-xs tracking-[0.12em] uppercase hover:bg-white transition-colors duration-300">
+                  Join Now
                 </button>
               </div>
             </div>
