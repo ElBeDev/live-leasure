@@ -26,6 +26,9 @@ export const metadata: Metadata = {
   title: "Live-Leisure | Premium Travel Membership",
   description: "High savings on your next vacation. Access exclusive deals on hotels, flights, cruises, tours and more all over the world.",
   keywords: ["travel", "vacation", "membership", "discounts", "hotels", "flights", "cruises"],
+  icons: {
+    icon: "/images/iconoNegro.png",
+  },
 };
 
 export default function RootLayout({
