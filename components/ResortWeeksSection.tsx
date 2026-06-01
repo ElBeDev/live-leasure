@@ -88,7 +88,7 @@ export default function ResortWeeksSection() {
               </div>
 
               {/* Features */}
-              <ul className="space-y-3 flex-grow mb-8">
+              <ul className="space-y-3 flex-grow">
                 {resort.features.map((feature) => (
                   <li key={feature} className="flex items-start gap-3">
                     <Check size={14} className="text-[#eee273]/50 mt-0.5 flex-shrink-0" strokeWidth={2} />
@@ -96,19 +96,6 @@ export default function ResortWeeksSection() {
                   </li>
                 ))}
               </ul>
-
-              {/* CTA */}
-              <motion.button
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className={`w-full py-3.5 font-sans font-semibold text-xs tracking-[0.12em] uppercase transition-colors duration-300 ${
-                  resort.featured
-                    ? 'bg-[#eee273] text-[#041c28] hover:bg-white'
-                    : 'border border-[#eee273]/30 text-[#eee273]/70 hover:border-[#eee273] hover:text-[#eee273]'
-                }`}
-              >
-                {t.resortWeeks.bookNow}
-              </motion.button>
             </motion.div>
           ))}
         </div>
