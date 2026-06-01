@@ -91,13 +91,6 @@ export default function ContactSection() {
               >
                 {t.contact.cta1}
               </motion.button>
-              <motion.a
-                href="mailto:reservations@live-leasure.com"
-                whileHover={{ scale: 1.02 }}
-                className="block w-full py-4 border border-[#eee273]/30 text-[#eee273] font-sans font-semibold text-xs tracking-[0.12em] uppercase text-center hover:border-[#eee273] hover:bg-[#eee273]/5 transition-all duration-300"
-              >
-                {t.contact.cta2}
-              </motion.a>
             </div>
           </motion.div>
         </div>
