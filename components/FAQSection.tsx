@@ -3,21 +3,13 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Plus, Minus } from 'lucide-react';
+import { useLanguage } from '@/lib/LanguageContext';
 
 export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const { t } = useLanguage();
 
-  const faqs = [
-    { question: 'What is Live-Leisure membership?', answer: 'Live-Leisure is a lifetime travel club membership offering exclusive access to resort weeks worldwide, over 1 million hotels, discounted flights, cruises, and more. With a one-time membership fee, you gain access to high savings on your vacations for life.' },
-    { question: 'How do Resort Weeks work?', answer: 'Resort Weeks offer 7-night stays in fully equipped, resort-style condos. We have three types: Last Minute Weeks ($399) for bookings within 30 days, Smart Weeks ($499) for planning up to 6 months ahead, and VIP Weeks ($499–$2,999) for premium luxury resorts.' },
-    { question: "What's the difference between Last Minute, Smart, and VIP Weeks?", answer: 'Last Minute Weeks are perfect for spontaneous travel at $399 with 5,000+ daily options. Smart Weeks at $499 let you plan ahead (up to 6 months) with thousands of worldwide options. VIP Weeks ($499–$2,999) offer premium accommodations at over 100,000 luxury resorts.' },
-    { question: 'How much can I really save with Live-Leisure?', answer: 'Members enjoy high savings on accommodations compared to public rates. Our price match guarantee ensures you get the best deal, plus an additional 5% discount if you find a better price elsewhere.' },
-    { question: 'Are there any hidden fees or annual costs?', answer: 'No hidden fees. Live-Leisure membership costs just $9.99 USD per month. You only pay for your bookings at our exclusive member rates. Cancel anytime.' },
-    { question: 'How far in advance can I book?', answer: 'Smart Weeks can be booked up to 6 months in advance, while Last Minute Weeks are available within 30 days of check-in. VIP Weeks and hotels have varying availability windows.' },
-    { question: 'What if I need to cancel or change my reservation?', answer: 'Cancellation policies vary by property and booking type. We recommend reviewing the specific terms during booking. Our 24/7 support team is always available to assist with changes or cancellations.' },
-    { question: 'Do you offer support during my trip?', answer: 'Yes. We provide 24/7 emergency support for all our members. Whether you need assistance before, during, or after your trip, our dedicated team is just a call away.' },
-    { question: 'How do I get started?', answer: "Simply click \"Join Now\" to become a member. Once enrolled, you'll get immediate access to our booking platform with all exclusive deals and can start planning your dream vacation right away." },
-  ];
+  const faqs = t.faq.items;
 
   return (
     <section id="faq" className="py-32 relative bg-[#061e2c]">
@@ -35,14 +27,14 @@ export default function FAQSection() {
         >
           <div className="flex items-center justify-center gap-4 mb-8">
             <div className="h-px w-12 bg-[#eee273]/40" />
-            <span className="font-sans text-[#eee273]/60 text-xs tracking-[0.35em] uppercase">Questions</span>
+            <span className="font-sans text-[#eee273]/60 text-xs tracking-[0.35em] uppercase">{t.faq.eyebrow}</span>
             <div className="h-px w-12 bg-[#eee273]/40" />
           </div>
           <h2 className="font-playfair font-bold text-[#eee273] mb-6" style={{ fontSize: 'clamp(2.2rem, 5vw, 4rem)' }}>
-            Frequently Asked
+            {t.faq.title}
           </h2>
           <p className="font-sans text-white/50 text-lg leading-relaxed">
-            Everything you need to know about Live-Leisure membership.
+            {t.faq.subtitle}
           </p>
         </motion.div>
 
@@ -95,13 +87,13 @@ export default function FAQSection() {
           transition={{ duration: 0.7, delay: 0.3 }}
           className="text-center mt-16 pt-12 border-t border-[#eee273]/10"
         >
-          <p className="font-sans text-white/40 text-sm mb-6">Still have questions? Our team is here to help.</p>
+          <p className="font-sans text-white/40 text-sm mb-6">{t.faq.stillQuestions}</p>
           <motion.button
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             className="px-10 py-4 border border-[#eee273]/30 text-[#eee273] font-sans font-semibold text-xs tracking-[0.12em] uppercase hover:border-[#eee273] hover:bg-[#eee273]/5 transition-all duration-300"
           >
-            Contact Support
+            {t.faq.contactSupport}
           </motion.button>
         </motion.div>
       </div>

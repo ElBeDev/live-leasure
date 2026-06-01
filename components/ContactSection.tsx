@@ -2,17 +2,20 @@
 
 import { motion } from 'framer-motion';
 import { MapPin, Mail, Phone, Clock } from 'lucide-react';
+import { useLanguage } from '@/lib/LanguageContext';
 
 export default function ContactSection() {
+  const { t } = useLanguage();
+
   const info = [
     {
       icon: MapPin,
-      label: 'Address',
+      label: t.contact.labels.address,
       value: 'Villas Vta Loc C 46 Int A\nVillas Vta, Las Glorias C.P. 48333\nPuerto Vallarta, Jal.',
     },
-    { icon: Phone, label: 'Phone', value: '322 225 2985' },
-    { icon: Mail, label: 'Email', value: 'reservations@live-leasure.com' },
-    { icon: Clock, label: 'Support', value: '24/7 Emergency Assistance' },
+    { icon: Phone, label: t.contact.labels.phone, value: '322 225 2985' },
+    { icon: Mail, label: t.contact.labels.email, value: 'reservations@live-leasure.com' },
+    { icon: Clock, label: t.contact.labels.support, value: t.contact.supportValue },
   ];
 
   return (
@@ -31,14 +34,14 @@ export default function ContactSection() {
         >
           <div className="flex items-center justify-center gap-4 mb-8">
             <div className="h-px w-12 bg-[#eee273]/40" />
-            <span className="font-sans text-[#eee273]/60 text-xs tracking-[0.35em] uppercase">Get In Touch</span>
+            <span className="font-sans text-[#eee273]/60 text-xs tracking-[0.35em] uppercase">{t.contact.eyebrow}</span>
             <div className="h-px w-12 bg-[#eee273]/40" />
           </div>
           <h2 className="font-playfair font-bold text-[#eee273] mb-6" style={{ fontSize: 'clamp(2.2rem, 5vw, 4rem)' }}>
-            Contact Us
+            {t.contact.title}
           </h2>
           <p className="font-sans text-white/50 text-lg max-w-xl mx-auto leading-relaxed">
-            Our team is here to help you plan your next unforgettable journey.
+            {t.contact.subtitle}
           </p>
         </motion.div>
 
@@ -74,10 +77,10 @@ export default function ContactSection() {
             className="bg-[#041c28] p-12 flex flex-col justify-center"
           >
             <h3 className="font-playfair font-semibold text-[#eee273] text-2xl mb-4">
-              Start Your Journey
+              {t.contact.startTitle}
             </h3>
             <p className="font-sans text-white/40 text-sm leading-relaxed mb-10">
-              Become a member today and unlock exclusive access to the world's finest travel experiences at member-only prices.
+              {t.contact.startDesc}
             </p>
 
             <div className="space-y-4">
@@ -86,14 +89,14 @@ export default function ContactSection() {
                 whileTap={{ scale: 0.98 }}
                 className="w-full py-4 bg-[#eee273] text-[#041c28] font-sans font-semibold text-xs tracking-[0.12em] uppercase hover:bg-white transition-colors duration-300"
               >
-                Become a Member
+                {t.contact.cta1}
               </motion.button>
               <motion.a
                 href="mailto:reservations@live-leasure.com"
                 whileHover={{ scale: 1.02 }}
                 className="block w-full py-4 border border-[#eee273]/30 text-[#eee273] font-sans font-semibold text-xs tracking-[0.12em] uppercase text-center hover:border-[#eee273] hover:bg-[#eee273]/5 transition-all duration-300"
               >
-                Send Us an Email
+                {t.contact.cta2}
               </motion.a>
             </div>
           </motion.div>

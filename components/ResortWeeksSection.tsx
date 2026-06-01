@@ -3,54 +3,22 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Clock, Calendar, Crown, Check } from 'lucide-react';
+import { useLanguage } from '@/lib/LanguageContext';
+
+const planIcons = [Clock, Calendar, Crown];
 
 export default function ResortWeeksSection() {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
+  const { t } = useLanguage();
 
-  const resortWeeks = [
-    {
-      icon: Clock,
-      type: 'Last Minute',
-      price: '$399',
-      tagline: 'Spontaneity Made Affordable',
-      features: [
-        'Fixed price for every week',
-        'Book within 30 days of check-in',
-        'Over 5,000 options daily',
-        'Any destination or unit size',
-        'Unbeatable last-minute value',
-      ],
-      featured: false,
-    },
-    {
-      icon: Calendar,
-      type: 'Smart Weeks',
-      price: '$499',
-      tagline: 'Plan Ahead & Save',
-      features: [
-        'One price for all weeks',
-        'Book up to 6 months in advance',
-        'Thousands of options worldwide',
-        'High-end condos (studio to multi-bedroom)',
-        'Exceptional quality guaranteed',
-      ],
-      featured: true,
-    },
-    {
-      icon: Crown,
-      type: 'VIP Weeks',
-      price: '$499 – $2,999',
-      tagline: 'Premium Luxury Experience',
-      features: [
-        'Flexible pricing for premium stays',
-        'Over 100,000 resort options',
-        'Premium destinations worldwide',
-        'Spacious family accommodations',
-        'Top-tier amenities included',
-      ],
-      featured: false,
-    },
-  ];
+  const resortWeeks = t.resortWeeks.plans.map((plan, i) => ({
+    icon: planIcons[i],
+    type: plan.type,
+    price: plan.price,
+    tagline: plan.tagline,
+    features: plan.features,
+    featured: i === 1,
+  }));
 
   return (
     <section id="pricing" className="py-32 relative bg-[#041c28]">
@@ -68,14 +36,14 @@ export default function ResortWeeksSection() {
         >
           <div className="flex items-center justify-center gap-4 mb-8">
             <div className="h-px w-12 bg-[#eee273]/40" />
-            <span className="font-sans text-[#eee273]/60 text-xs tracking-[0.35em] uppercase">Seven-Night Stays</span>
+            <span className="font-sans text-[#eee273]/60 text-xs tracking-[0.35em] uppercase">{t.resortWeeks.eyebrow}</span>
             <div className="h-px w-12 bg-[#eee273]/40" />
           </div>
           <h2 className="font-playfair font-bold text-[#eee273] mb-6" style={{ fontSize: 'clamp(2.2rem, 5vw, 4rem)' }}>
-            Resort Weeks
+            {t.resortWeeks.title}
           </h2>
           <p className="font-sans text-white/50 text-lg max-w-2xl mx-auto leading-relaxed">
-            Seven-night stays in fully equipped, resort-style accommodations. Perfect for families, couples, or solo adventurers.
+            {t.resortWeeks.subtitle}
           </p>
         </motion.div>
 
@@ -97,7 +65,7 @@ export default function ResortWeeksSection() {
               {resort.featured && (
                 <div className="absolute -top-px left-1/2 -translate-x-1/2">
                   <span className="block bg-[#eee273] text-[#041c28] font-sans font-semibold text-[10px] tracking-[0.15em] uppercase px-4 py-1">
-                    Most Popular
+                    {t.resortWeeks.mostPopular}
                   </span>
                 </div>
               )}
@@ -116,7 +84,7 @@ export default function ResortWeeksSection() {
                 <div className="font-playfair font-bold text-[#eee273]" style={{ fontSize: 'clamp(1.8rem, 3vw, 2.5rem)' }}>
                   {resort.price}
                 </div>
-                <div className="font-sans text-white/30 text-xs tracking-[0.15em] uppercase mt-1">per 7-night stay · USD</div>
+                <div className="font-sans text-white/30 text-xs tracking-[0.15em] uppercase mt-1">{t.resortWeeks.perStay}</div>
               </div>
 
               {/* Features */}
@@ -139,7 +107,7 @@ export default function ResortWeeksSection() {
                     : 'border border-[#eee273]/30 text-[#eee273]/70 hover:border-[#eee273] hover:text-[#eee273]'
                 }`}
               >
-                Book Now
+                {t.resortWeeks.bookNow}
               </motion.button>
             </motion.div>
           ))}
@@ -153,7 +121,7 @@ export default function ResortWeeksSection() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-center font-sans text-white/30 text-sm mt-10"
         >
-          All resort weeks include fully equipped accommodations with resort-quality amenities.
+          {t.resortWeeks.note}
         </motion.p>
       </div>
 

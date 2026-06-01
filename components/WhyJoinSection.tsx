@@ -4,6 +4,9 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Award, TrendingUp, Shield } from 'lucide-react';
 import { useEffect, useState } from 'react';
+import { useLanguage } from '@/lib/LanguageContext';
+
+const featureIcons = [Award, TrendingUp, Shield];
 
 function CountUp({ end, suffix, inView }: { end: number; suffix: string; inView: boolean }) {
   const [count, setCount] = useState(0);
@@ -27,17 +30,12 @@ function CountUp({ end, suffix, inView }: { end: number; suffix: string; inView:
 
 export default function WhyJoinSection() {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.2 });
+  const { t } = useLanguage();
 
-  const stats = [
-    { end: 500000, suffix: '+', label: 'Members Worldwide' },
-    { end: 133000, suffix: '+', label: 'Travel Destinations' },
-    { end: 70, suffix: '+', label: 'Countries Available' },
-  ];
-
-  const features = [
-    { icon: Award, title: 'Best Prices', description: 'Our technology constantly searches and compares millions of options to guarantee you the best rates available.' },
-    { icon: TrendingUp, title: 'Lifetime Membership', description: 'One-time payment for lifetime access to exclusive travel deals and experiences worldwide.' },
-    { icon: Shield, title: '24/7 Support', description: 'Our dedicated team is always ready to help with travel emergencies and any questions.' },
+  const statsData = [
+    { end: 500000, suffix: t.whyJoin.stats[0].suffix, label: t.whyJoin.stats[0].label },
+    { end: 133000, suffix: t.whyJoin.stats[1].suffix, label: t.whyJoin.stats[1].label },
+    { end: 70, suffix: t.whyJoin.stats[2].suffix, label: t.whyJoin.stats[2].label },
   ];
 
   return (
@@ -56,20 +54,20 @@ export default function WhyJoinSection() {
         >
           <div className="flex items-center justify-center gap-4 mb-8">
             <div className="h-px w-12 bg-[#eee273]/40" />
-            <span className="font-sans text-[#eee273]/60 text-xs tracking-[0.35em] uppercase">Why Us</span>
+            <span className="font-sans text-[#eee273]/60 text-xs tracking-[0.35em] uppercase">{t.whyJoin.eyebrow}</span>
             <div className="h-px w-12 bg-[#eee273]/40" />
           </div>
           <h2 className="font-playfair font-bold text-[#eee273] mb-6" style={{ fontSize: 'clamp(2.2rem, 5vw, 4rem)' }}>
-            Why Join Live-Leisure
+            {t.whyJoin.title}
           </h2>
           <p className="font-sans text-white/50 text-lg max-w-2xl mx-auto leading-relaxed">
-            We offer our members exclusive access to incredible vacation deals and one-of-a-kind experiences—all designed to make every journey unforgettable.
+            {t.whyJoin.subtitle}
           </p>
         </motion.div>
 
         {/* Stats — números grandes, minimalistas */}
         <div ref={ref} className="grid grid-cols-1 md:grid-cols-3 gap-px bg-[#eee273]/10 mb-20">
-          {stats.map((stat, index) => (
+          {statsData.map((stat, index) => (
             <motion.div
               key={stat.label}
               initial={{ opacity: 0, y: 20 }}
@@ -87,23 +85,26 @@ export default function WhyJoinSection() {
 
         {/* Features — columnas simples */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-[#eee273]/10">
-          {features.map((feature, index) => (
-            <motion.div
-              key={feature.title}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.12 }}
-              className="group bg-[#061e2c] p-10 hover:bg-[#072d3e]/40 transition-colors duration-300"
-            >
-              <div className="mb-5 text-[#eee273]/50 group-hover:text-[#eee273] transition-colors duration-300">
-                <feature.icon size={28} strokeWidth={1.5} />
-              </div>
-              <h3 className="font-playfair font-semibold text-[#eee273] text-xl mb-3">{feature.title}</h3>
-              <p className="font-sans text-white/40 text-sm leading-relaxed group-hover:text-white/60 transition-colors duration-300">{feature.description}</p>
-              <div className="mt-6 h-px w-0 bg-[#eee273]/40 group-hover:w-full transition-all duration-500" />
-            </motion.div>
-          ))}
+          {t.whyJoin.features.map((feature, index) => {
+            const Icon = featureIcons[index];
+            return (
+              <motion.div
+                key={feature.title}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.12 }}
+                className="group bg-[#061e2c] p-10 hover:bg-[#072d3e]/40 transition-colors duration-300"
+              >
+                <div className="mb-5 text-[#eee273]/50 group-hover:text-[#eee273] transition-colors duration-300">
+                  <Icon size={28} strokeWidth={1.5} />
+                </div>
+                <h3 className="font-playfair font-semibold text-[#eee273] text-xl mb-3">{feature.title}</h3>
+                <p className="font-sans text-white/40 text-sm leading-relaxed group-hover:text-white/60 transition-colors duration-300">{feature.description}</p>
+                <div className="mt-6 h-px w-0 bg-[#eee273]/40 group-hover:w-full transition-all duration-500" />
+              </motion.div>
+            );
+          })}
         </div>
       </div>
 

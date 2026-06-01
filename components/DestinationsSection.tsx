@@ -8,18 +8,20 @@ import Image from 'next/image';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
+import { useLanguage } from '@/lib/LanguageContext';
+
+const destinationImages = [
+  '/images/dubai.jpg', '/images/bali.jpg', '/images/paris.jpg', '/images/cancun.jpg',
+  '/images/tokyo.jpg', '/images/new-york.jpg', '/images/maldives.jpg', '/images/rome.jpg',
+];
 
 export default function DestinationsSection() {
-  const destinations = [
-    { name: 'Dubai', country: 'United Arab Emirates', image: '/images/dubai.jpg', properties: '1,250+' },
-    { name: 'Bali', country: 'Indonesia', image: '/images/bali.jpg', properties: '980+' },
-    { name: 'Paris', country: 'France', image: '/images/paris.jpg', properties: '2,100+' },
-    { name: 'Cancún', country: 'Mexico', image: '/images/cancun.jpg', properties: '1,500+' },
-    { name: 'Tokyo', country: 'Japan', image: '/images/tokyo.jpg', properties: '1,800+' },
-    { name: 'New York', country: 'United States', image: '/images/new-york.jpg', properties: '3,200+' },
-    { name: 'Maldives', country: 'Maldives', image: '/images/maldives.jpg', properties: '450+' },
-    { name: 'Rome', country: 'Italy', image: '/images/rome.jpg', properties: '1,600+' },
-  ];
+  const { t } = useLanguage();
+
+  const destinations = t.destinations.items.map((item, i) => ({
+    ...item,
+    image: destinationImages[i],
+  }));
 
   return (
     <section id="destinations" className="py-32 relative bg-[#061e2c]">
@@ -37,14 +39,14 @@ export default function DestinationsSection() {
         >
           <div className="flex items-center justify-center gap-4 mb-8">
             <div className="h-px w-12 bg-[#eee273]/40" />
-            <span className="font-sans text-[#eee273]/60 text-xs tracking-[0.35em] uppercase">133,000+ Destinations</span>
+            <span className="font-sans text-[#eee273]/60 text-xs tracking-[0.35em] uppercase">{t.destinations.eyebrow}</span>
             <div className="h-px w-12 bg-[#eee273]/40" />
           </div>
           <h2 className="font-playfair font-bold text-[#eee273] mb-6" style={{ fontSize: 'clamp(2.2rem, 5vw, 4rem)' }}>
-            Explore the World
+            {t.destinations.title}
           </h2>
           <p className="font-sans text-white/50 text-lg max-w-2xl mx-auto leading-relaxed">
-            From tropical getaways to city escapes, our members access premium destinations worldwide.
+            {t.destinations.subtitle}
           </p>
         </motion.div>
 
@@ -98,7 +100,7 @@ export default function DestinationsSection() {
                         <MapPin size={12} strokeWidth={1.5} />
                         {destination.country}
                       </p>
-                      <p className="font-sans text-[#eee273]/60 text-xs tracking-wider">{destination.properties} properties</p>
+                      <p className="font-sans text-[#eee273]/60 text-xs tracking-wider">{destination.properties} {t.destinations.propertiesLabel}</p>
                     </div>
                   </div>
                 </motion.div>

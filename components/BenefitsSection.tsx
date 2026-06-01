@@ -3,21 +3,19 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Hotel, Plane, Ship, MapPin, Car, Ticket, Package, Globe, Tag } from 'lucide-react';
+import { useLanguage } from '@/lib/LanguageContext';
+
+const icons = [Hotel, Plane, Ship, MapPin, Ticket, Car, Package, Globe, Tag];
 
 export default function BenefitsSection() {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
+  const { t } = useLanguage();
 
-  const benefits = [
-    { icon: Hotel, title: 'Exclusive Hotel Rates', description: 'Over 1 million hotels worldwide with exclusive rates. Price Match Guarantee + 5% discount.' },
-    { icon: Plane, title: 'Discounted Flights', description: 'Connect globally with 200+ airlines, including low-cost carriers.' },
-    { icon: Ship, title: 'Member-only Cruises', description: 'Access to 25K+ cruise itineraries to navigate the seven seas.' },
-    { icon: MapPin, title: 'Vacation Rentals', description: 'Resort-style accommodations in fully equipped condos worldwide.' },
-    { icon: Ticket, title: 'Tours & Activities', description: 'Discover local experiences, theme parks, and entertainment tickets.' },
-    { icon: Car, title: 'Wholesale Car Rentals', description: 'Discounted rates at over 10,000 pickup locations worldwide.' },
-    { icon: Package, title: 'Travel Packages', description: 'Custom packages with flights, hotels, and curated experiences at the best prices.' },
-    { icon: Globe, title: 'Multi-City Packages', description: 'Optimized multi-destination trips with hotels, flights, and activities.' },
-    { icon: Tag, title: 'Deals at Home', description: 'Unlock discounts on 700,000+ merchants across North America.' },
-  ];
+  const benefits = t.benefits.items.map((item, i) => ({
+    icon: icons[i],
+    title: item.title,
+    description: item.description,
+  }));
 
   return (
     <section id="benefits" className="py-32 relative bg-[#041c28]">
@@ -36,14 +34,14 @@ export default function BenefitsSection() {
         >
           <div className="flex items-center justify-center gap-4 mb-8">
             <div className="h-px w-12 bg-[#eee273]/40" />
-            <span className="font-sans text-[#eee273]/60 text-xs tracking-[0.35em] uppercase">Membership Access</span>
+            <span className="font-sans text-[#eee273]/60 text-xs tracking-[0.35em] uppercase">{t.benefits.eyebrow}</span>
             <div className="h-px w-12 bg-[#eee273]/40" />
           </div>
           <h2 className="font-playfair font-bold text-[#eee273] mb-6" style={{ fontSize: 'clamp(2.2rem, 5vw, 4rem)' }}>
-            Member Benefits
+            {t.benefits.title}
           </h2>
           <p className="font-sans text-white/50 text-lg max-w-2xl mx-auto leading-relaxed">
-            Unlock exclusive access to incredible vacation deals and one-of-a-kind experiences—all designed to make every journey unforgettable.
+            {t.benefits.subtitle}
           </p>
         </motion.div>
 
@@ -89,10 +87,13 @@ export default function BenefitsSection() {
             whileTap={{ scale: 0.98 }}
             className="px-10 py-4 bg-[#eee273] text-[#041c28] font-sans font-semibold text-sm tracking-[0.12em] uppercase hover:bg-white transition-colors duration-300"
           >
-            Unlock All Benefits
+            {t.benefits.cta}
           </motion.button>
         </motion.div>
       </div>
+
+      {/* Línea inferior */}
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#eee273]/20 to-transparent" />
 
       {/* Línea inferior */}
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#eee273]/20 to-transparent" />

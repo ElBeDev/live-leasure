@@ -1,8 +1,11 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { useLanguage } from '@/lib/LanguageContext';
 
 export default function HotelsShowcase() {
+  const { t } = useLanguage();
+
   const brands = [
     'Marriott', 'Hilton', 'Hyatt', 'InterContinental', 'Radisson',
     'Best Western', 'Holiday Inn', 'Sheraton', 'Wyndham', 'Royalton',
@@ -24,14 +27,14 @@ export default function HotelsShowcase() {
         >
           <div className="flex items-center justify-center gap-4 mb-8">
             <div className="h-px w-12 bg-[#eee273]/40" />
-            <span className="font-sans text-[#eee273]/60 text-xs tracking-[0.35em] uppercase">1M+ Hotels Worldwide</span>
+            <span className="font-sans text-[#eee273]/60 text-xs tracking-[0.35em] uppercase">{t.hotels.eyebrow}</span>
             <div className="h-px w-12 bg-[#eee273]/40" />
           </div>
           <h2 className="font-playfair font-bold text-[#eee273] mb-6" style={{ fontSize: 'clamp(2.2rem, 5vw, 4rem)' }}>
-            Stay Your Way, Anywhere
+            {t.hotels.title}
           </h2>
           <p className="font-sans text-white/50 text-lg max-w-2xl mx-auto leading-relaxed">
-            Access over 1 million hotels worldwide — from boutique hideaways to globally recognized luxury brands.
+            {t.hotels.subtitle}
           </p>
         </motion.div>
 
@@ -67,11 +70,7 @@ export default function HotelsShowcase() {
           transition={{ duration: 0.7, delay: 0.3 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-12 sm:gap-20"
         >
-          {[
-            { value: '1M+', label: 'Hotels' },
-            { value: '200+', label: 'Airlines' },
-            { value: '5%', label: 'Price Match Bonus' },
-          ].map((stat) => (
+          {t.hotels.stats.map((stat) => (
             <div key={stat.label} className="text-center">
               <div className="font-playfair font-bold text-[#eee273] text-4xl mb-1">{stat.value}</div>
               <div className="font-sans text-white/40 text-xs tracking-[0.2em] uppercase">{stat.label}</div>

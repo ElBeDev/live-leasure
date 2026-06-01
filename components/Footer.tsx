@@ -4,22 +4,25 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Facebook, Instagram, Mail, Phone, MapPin } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useLanguage } from '@/lib/LanguageContext';
 
 export default function Footer() {
+  const { t } = useLanguage();
+
   const links = {
     Navigate: [
-      { label: 'Benefits', href: '#benefits' },
-      { label: 'Why Join', href: '#why-join' },
-      { label: 'Pricing', href: '#pricing' },
-      { label: 'Destinations', href: '#destinations' },
+      { label: t.footer.columns.Navigate[0], href: '#benefits' },
+      { label: t.footer.columns.Navigate[1], href: '#why-join' },
+      { label: t.footer.columns.Navigate[2], href: '#pricing' },
+      { label: t.footer.columns.Navigate[3], href: '#destinations' },
     ],
     Support: [
-      { label: 'Contact Us', href: '#contact' },
-      { label: 'FAQ', href: '#faq' },
+      { label: t.footer.columns.Support[0], href: '#contact' },
+      { label: t.footer.columns.Support[1], href: '#faq' },
     ],
     Legal: [
-      { label: 'Terms & Conditions', href: '/terms' },
-      { label: 'Privacy Policy', href: '/privacy' },
+      { label: t.footer.columns.Legal[0], href: '/terms' },
+      { label: t.footer.columns.Legal[1], href: '/privacy' },
     ],
   };
 
@@ -40,7 +43,7 @@ export default function Footer() {
               <Image src="/images/LogoLB.png" alt="Live-Leisure" fill className="object-contain object-left" />
             </div>
             <p className="font-sans text-sm leading-relaxed mb-8 max-w-xs">
-              Your gateway to exclusive travel experiences. Premium membership with lifetime access to high savings worldwide.
+              {t.footer.description}
             </p>
             <div className="space-y-3">
               <div className="flex items-start gap-3">
@@ -78,7 +81,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="pt-8 border-t border-[#eee273]/8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="font-sans text-xs text-white/25">
-            © {new Date().getFullYear()} Live-Leisure. All rights reserved.
+            © {new Date().getFullYear()} Live-Leisure. {t.footer.copyright}
           </p>
           <div className="flex items-center gap-4">
             <motion.a

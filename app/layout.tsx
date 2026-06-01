@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Poppins, Playfair_Display, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
+import { LanguageProvider } from "@/lib/LanguageContext";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const poppins = Poppins({
@@ -35,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${poppins.variable} ${playfair.variable} ${cormorant.variable}`}>
       <body className="font-sans">
-        {children}
+        <LanguageProvider>{children}</LanguageProvider>
       </body>
     </html>
   );

@@ -5,10 +5,12 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useLanguage } from '@/lib/LanguageContext';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { lang, setLang, t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,11 +21,11 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { href: '#benefits', label: 'Benefits' },
-    { href: '#why-join', label: 'Why Join' },
-    { href: '#pricing', label: 'Pricing' },
-    { href: '#destinations', label: 'Destinations' },
-    { href: '#contact', label: 'Contact' },
+    { href: '#benefits', label: t.navbar.benefits },
+    { href: '#why-join', label: t.navbar.whyJoin },
+    { href: '#pricing', label: t.navbar.pricing },
+    { href: '#destinations', label: t.navbar.destinations },
+    { href: '#contact', label: t.navbar.contact },
   ];
 
   return (
@@ -80,6 +82,22 @@ export default function Navbar() {
 
           {/* CTA buttons — estilo luxury */}
           <div className="hidden md:flex items-center gap-5">
+            {/* Language toggle */}
+            <div className="flex items-center gap-1 font-sans text-xs tracking-[0.14em] uppercase">
+              <button
+                onClick={() => setLang('en')}
+                className={`px-1.5 py-0.5 transition-colors duration-200 ${lang === 'en' ? 'text-[#eee273]' : 'text-[#eee273]/35 hover:text-[#eee273]/60'}`}
+              >
+                EN
+              </button>
+              <span className="text-[#eee273]/25">|</span>
+              <button
+                onClick={() => setLang('es')}
+                className={`px-1.5 py-0.5 transition-colors duration-200 ${lang === 'es' ? 'text-[#eee273]' : 'text-[#eee273]/35 hover:text-[#eee273]/60'}`}
+              >
+                ES
+              </button>
+            </div>
             <motion.a
               href="https://login.live-leisure.com"
               initial={{ opacity: 0 }}
@@ -89,7 +107,7 @@ export default function Navbar() {
               whileTap={{ scale: 0.98 }}
               className="px-6 py-2.5 bg-[#eee273] text-[#041c28] font-sans font-semibold text-xs tracking-[0.12em] uppercase hover:bg-white transition-colors duration-300"
             >
-              Login
+              {t.navbar.login}
             </motion.a>
           </div>
 
@@ -126,12 +144,28 @@ export default function Navbar() {
                   {link.label}
                 </Link>
               ))}
-              <div className="pt-6 border-t border-[#eee273]/10">
+              <div className="pt-6 border-t border-[#eee273]/10 space-y-4">
+                {/* Language toggle mobile */}
+                <div className="flex items-center gap-3 font-sans text-xs tracking-[0.14em] uppercase">
+                  <button
+                    onClick={() => setLang('en')}
+                    className={`transition-colors duration-200 ${lang === 'en' ? 'text-[#eee273]' : 'text-[#eee273]/35'}`}
+                  >
+                    EN
+                  </button>
+                  <span className="text-[#eee273]/25">|</span>
+                  <button
+                    onClick={() => setLang('es')}
+                    className={`transition-colors duration-200 ${lang === 'es' ? 'text-[#eee273]' : 'text-[#eee273]/35'}`}
+                  >
+                    ES
+                  </button>
+                </div>
                 <a
                   href="https://login.live-leisure.com"
                   className="block w-full text-center py-3 bg-[#eee273] text-[#041c28] font-sans font-semibold text-xs tracking-[0.12em] uppercase hover:bg-white transition-colors duration-300"
                 >
-                  Login
+                  {t.navbar.login}
                 </a>
               </div>
             </div>
