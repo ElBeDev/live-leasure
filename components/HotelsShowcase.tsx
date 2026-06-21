@@ -75,20 +75,20 @@ export default function HotelsShowcase() {
           {TRACK.map((brand, i) => (
             <div
               key={i}
-              className={`mx-4 flex-shrink-0 flex flex-col items-center justify-center gap-2 px-6 py-4 border ${
+              className={`mx-6 flex-shrink-0 flex flex-col items-center justify-center gap-3 px-8 py-6 border ${
                 brand.type === 'hotel'
                   ? 'border-[#eee273]/15 bg-[#eee273]/5'
                   : 'border-white/10 bg-white/4'
               }`}
-              style={{ minWidth: '130px' }}
+              style={{ minWidth: '220px' }}
             >
-              <div className="relative w-24 h-10 flex items-center justify-center">
+              <div className="relative w-40 h-16 flex items-center justify-center">
                 <Image
                   src={brand.src}
                   alt={brand.name}
                   fill
                   className={`object-contain ${brand.type === 'hotel' ? 'brightness-0 invert opacity-70' : 'opacity-60'}`}
-                  sizes="96px"
+                  sizes="160px"
                 />
               </div>
               <span className={`font-sans text-[10px] tracking-[0.12em] uppercase whitespace-nowrap ${
