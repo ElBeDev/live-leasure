@@ -87,8 +87,8 @@ export default function HotelsShowcase() {
                   src={brand.src}
                   alt={brand.name}
                   fill
-                  className={`object-contain ${brand.type === 'hotel' ? 'opacity-85' : 'opacity-60'}`}
-                  style={brand.type === 'hotel' ? { filter: 'brightness(0) saturate(100%) invert(92%) sepia(30%) saturate(700%) hue-rotate(5deg) brightness(105%)' } : undefined}
+                  className={`object-contain ${brand.type === 'hotel' ? 'brightness-0 invert opacity-70' : 'opacity-85'}`}
+                  style={brand.type === 'airline' ? { filter: 'brightness(0) saturate(100%) invert(92%) sepia(30%) saturate(700%) hue-rotate(5deg) brightness(105%)' } : undefined}
                   sizes="160px"
                 />
               </div>
